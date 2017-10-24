@@ -10,3 +10,19 @@ from lodge.models.models import *
 
 
 # Create your views here.
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the index.")
+
+def about(request):
+	template_name = 'about.html' 
+	return render(request, template_name, {})
+
+def events(request):
+	template_name = 'events.html' 
+	return render(request, template_name, {})
+
+def membership(request):
+	template_name = 'membership.html' 
+	return render(request, template_name, {})
