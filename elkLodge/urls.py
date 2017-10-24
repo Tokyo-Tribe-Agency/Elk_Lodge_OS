@@ -23,8 +23,8 @@ from lodge.views.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
-    url(r'^$', about, name='about'),
-    url(r'^$', events, name='events'),
-    url(r'^$', membership, name='membership'),
+    url(r'^about$', about, name='about'),
+    url(r'^events$', events, name='events'),
+    url(r'^membership$', membership, name='membership'),
 
 ]

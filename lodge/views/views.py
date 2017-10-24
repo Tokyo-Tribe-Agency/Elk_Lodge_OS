@@ -13,7 +13,8 @@ from lodge.models.models import *
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the index.")
+	template_name = 'index.html' 
+	return render(request, template_name, {})
 
 def about(request):
 	template_name = 'about.html' 
