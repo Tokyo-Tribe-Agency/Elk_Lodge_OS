@@ -7,23 +7,25 @@ from django import forms
 from django.db.models import Q
 from lodge.models.models import *
 
-
-
 # Create your views here.
-
 
 def index(request):
 	template_name = 'index.html' 
 	return render(request, template_name, {})
 
 def about(request):
-	template_name = 'about.html' 
-	return render(request, template_name, {})
+	template_name = 'about.html'
+	all_members = Member.objects.all() 
+	return render(request, template_name, {'members' : all_members})
 
 def events(request):
 	template_name = 'events.html' 
-	return render(request, template_name, {})
+	all_events = Event.objects.all()
+	no_ono = Event.objects.filter(attendence__pk = 1).distinct()
+	print("sup", no_ono)
+	return render(request, template_name, {'events' : all_events, 'no_ono': no_ono})
 
 def membership(request):
 	template_name = 'membership.html' 
-	return render(request, template_name, {})
+	all_members = Member.objects.all()
+	return render(request, template_name, {'member': all_members})

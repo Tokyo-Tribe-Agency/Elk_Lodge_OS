@@ -18,7 +18,7 @@ class Member(models.Model):
 	due = models.ForeignKey(Due)
 
 
-class Events(models.Model):
+class Event(models.Model):
 	title = models.CharField(max_length=100)
 	date = models.DateField()
 	attendence = models.ManyToManyField(Member)

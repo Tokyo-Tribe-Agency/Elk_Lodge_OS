@@ -13,6 +13,11 @@
 			<h1 class="header lead">Elk Lodge of Franklin</h1>
 			<h2>ABOUT</h2>
 		</div>
+		<div>
+			{% for member in members %}
+			<h3>{{member.last_name}}</h3>
+			{% endfor %}
+		</div>
 	</div>
 	<!-- scripts -->
 	<script

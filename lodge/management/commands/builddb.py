@@ -6,6 +6,5 @@ from django.core.management.commands import makemigrations
 
 class Command(BaseCommand):
 	def handle(self, *args, **options):
-        management.call_command('makemigrations')
-        management.call_command('migrate')
-        
+		management.call_command('makemigrations')
+		management.call_command('migrate')
