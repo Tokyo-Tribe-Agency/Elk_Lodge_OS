@@ -1,0 +1,61 @@
+[
+  {
+    "model": "lodge.Payment",
+    "pk": 1,
+    "fields": {
+      "payment_data": "datatatatatat" 
+    }
+  },
+  {
+    "model": "lodge.Due",
+    "pk": 1,
+    "fields": {
+      "date": "2017-04-25",
+      "date_paid": "2017-04-25"
+    }
+  },
+  {
+    "model": "lodge.Member",
+    "pk": 1,
+    "fields": {
+      "first_name": "Paul",
+      "last_name": "McCartney",
+      "date_joined":"2017-04-25",
+      "active": "True",
+      "payment": 1,
+      "due": 1
+    }
+  },
+  {
+    "model": "lodge.Member",
+    "pk": 2,
+    "fields": {
+      "first_name": "Yoko",
+      "last_name": "Ono",
+      "date_joined":"2017-04-25",
+      "active": "True",
+      "payment": 1,
+      "due": 1
+    }
+  },
+  {
+    "model": "lodge.Event",
+    "pk": 1,
+    "fields": {
+      "title": "Party",
+      "date": "2017-04-25",
+      "attendence": [1, 2] ,
+      "location" : "Salt Lake City"
+    }
+  },
+  {
+    "model": "lodge.Event",
+    "pk": 2,
+    "fields": {
+      "title": "Party No Ono",
+      "date": "2017-04-25",
+      "attendence": [1],
+      "location" : "Salt Lake City"
+    }
+  }
+]

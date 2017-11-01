@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	<div class="container-fluid">
+		<div class="row text-center">
+			<h1 class="header lead">Elk Lodge of Franklin</h1>
+			<h2>MEMBERSHIP</h2>
+		</div>
+		<div>
+			{% for member in all_members %}
+			<h3>{{member.first_name}}</h3>
+			{% endfor %}
+		</div>
+	</div>
+	<!-- scripts -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/javascripts.js"></script>
+</body>
+</html> 
+
+
