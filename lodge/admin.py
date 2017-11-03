@@ -2,6 +2,7 @@ from django.contrib import admin
 from lodge.models.models import *
 
 
+
 class PaymentAdmin(admin.ModelAdmin):
 	fields = ('payment_data')
 

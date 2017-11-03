@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^about$', about, name='about'),
     url(r'^events$', events, name='events'),
     url(r'^membership$', membership, name='membership'),
+    url(r'^recent_events$', recent_events, name='recent_events')
 
 ]
