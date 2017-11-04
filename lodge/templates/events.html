@@ -1,38 +1,33 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>ElkLodge</title>
-	{%include "styles.html"%}
-</head>
-<body>
-	{%include "navbar.html"%}
-	<div class="container-fluid">
-		<div class="row text-center">
-			<h1 class="header lead">Elk Lodge of Franklin</h1>
-			<h2>EVENTS</h2>
-		</div>
-		<div>
-			{% for no in no_ono %}
-			<h4>{{no.title}}</h4>
-			{% endfor %}
-
-
-			{% for event in events %}
-			<h3>{{event.title}}</h3>
-			<h3>{{event.date}}</h3>
-			{% endfor %}
+<div  class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      {% for event in events %}
+      <div class="item">
+  		<div class="card" style="width: 20rem;">
+				<div class="card-block">
+					<img src="http://lorempixel.com/200/200/business">
+				<h4 class="card-title">{{event.event_name}}</h4>
+				<p class="card-text">{{event.event_description}}</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>		
 		</div>
 	</div>
-	<!-- scripts -->
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="static/javascripts.js"></script>
-</body>
-</html> 
+		{% endfor %}
+    </div>
 
-
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

@@ -115,6 +115,42 @@
     }
   },
   {
+    "model": "lodge.Events",
+    "pk": 2,
+    "fields": {
+      "event_name": "Golf'N for Gandolf", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2017-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 3,
+    "fields": {
+      "event_name": "Golf'N for Gumbo", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2017-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 4,
+    "fields": {
+      "event_name": "Golf'N for Gravy", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2017-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
     "model": "lodge.Newsletter",
     "pk": 2,
     "fields": {

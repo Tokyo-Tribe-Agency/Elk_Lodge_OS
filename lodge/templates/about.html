@@ -1,32 +1,24 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>ElkLodge</title>
-	{%include "styles.html"%}
-</head>
-<body>
-	{%include "navbar.html"%}
-	<div class="container-fluid">
+<div class="container-fluid">	
 		<div class="row text-center">
-			<h1 class="header lead">Elk Lodge of Franklin</h1>
-			<h2>ABOUT</h2>
-		</div>
-		<div>
-			{% for member in members %}
-			<h3>{{member.last_name}}</h3>
-			{% endfor %}
+			<h2>Who are the Franklin Elks?</h2>
+			<h5>{% lorem %}</h5>
 		</div>
 	</div>
-	<!-- scripts -->
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="static/javascripts.js"></script>
-</body>
-</html> 
-
-
+<div id="about" class="row text-center"> 
+	<div class="carousel slide media-carousel" id="media">
+		<div class="carousel-inner">
+		{% for elk in members%}
+			<div class="item">
+				<div class="card" style="width: 20rem;">
+			  		<img class="card-img-top" src="{{elk.elk_photo}}" alt="Card image cap">
+			  			<div class="card-block">
+			    			<h4 class="card-title">{{elk.first_name}}</h4>
+			    			<p class="card-text">{{elk.last_name}}</p>
+			  			</div>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</div>
+	

@@ -20,10 +20,9 @@ from lodge.views.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name='index'),
-    url(r'^about$', about, name='about'),
-    url(r'^events$', events, name='events'),
-    url(r'^membership$', membership, name='membership'),
-    url(r'^recent_events$', recent_events, name='recent_events')
+    url(r'^$', index, name='index')
+    # url(r'^about$', about, name='about'),
+    # url(r'^events$', events, name='events'),
+    # url(r'^recent_events$', recent_events, name='recent_events')
 
 ]
