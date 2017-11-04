@@ -1,3 +1,4 @@
+<div class="jumbotron text-center slideBox">
 <div  class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -8,10 +9,10 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       {% for event in events %}
-      <div class="item">
-  		<div class="card" style="width: 20rem;">
+      <div class="item active">
+  		<div class="card">
 				<div class="card-block">
-					<img src="http://lorempixel.com/200/200/business">
+					<!-- <img src="http://lorempixel.com/200/200/business"> -->
 				<h4 class="card-title">{{event.event_name}}</h4>
 				<p class="card-text">{{event.event_description}}</p>
 				<a href="#" class="btn btn-primary">Go somewhere</a>
