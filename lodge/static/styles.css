@@ -1,28 +1,34 @@
-body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
+  body {
+      font-family: Montserrat, sans-serif;
   }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
+
+  h1 {
+    font-family: Palatino Linotype, serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
   }
+
+  h3 {
+    font-family: Palatino Linotype, serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+  }
+
   h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+  }
+
+
   .slideBox {
     height: 600px;
     width: auto;
-
-
   }
+
   .jumbotron {
       background-color: #EDF0F2;
       color:  #303030;
@@ -35,24 +41,7 @@ body {
   .bg-grey {
       background-color: #f6f6f6;
   }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
+ 
   .carousel-control.right, .carousel-control.left {
       background-image: none;
       color: #f4511e;
@@ -63,38 +52,31 @@ body {
   .carousel-indicators li.active {
       background-color: #f4511e;
   }
- /* .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }*/
+ 
   .panel {
-      border: 1px solid #f4511e; 
+      /*border: 1px solid #f4511e; */
       border-radius:0 !important;
       transition: box-shadow 0.5s;
+      height: 30% !important;
   }
   .panel:hover {
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #303030;
+      /*border: 1px solid #303030;*/
       background-color: #fff !important;
       color: #303030;
   }
   .panel-heading {
-      color: #fff !important;
-      background-color: #303030 !important;
+      color: lightblue !important;
+      /*background-color: #303030 !important;*/
       padding: 25px;
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid lightblue;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
+
   }
   .panel-footer {
       background-color: white !important;
@@ -111,6 +93,14 @@ body {
       background-color: #303030;
       color: #fff;
   }
+
+
+
+
+
+
+
+
   .navbar {
       margin-bottom: 0;
       background-color: #EDF0F2;
@@ -122,17 +112,26 @@ body {
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
+  .yay {
+      border-radius: 7%;
+      color: #C7C7BB;
+      background-color: #334738;
+      float: right;
+  }
+  
   .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
+      color: #334738 !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #fff !important;
+      color: white !important;
       background-color: #354F52 !important;
   }
   .navbar-default .navbar-toggle {
       border-color: transparent;
       color: #fff !important;
   }
+
+
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
@@ -181,11 +180,7 @@ body {
         margin-bottom: 35px;
     }
   }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
+  
 
 
 
@@ -244,14 +239,31 @@ form {
   }
 }
 
+
+
+
 .signin {
   width: auto;
   border-radius: 7%;
 
 }
 
+.blurg {
+  padding-left: 5%;
+}
+
 .band {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  text-transform: capitalize;
   padding-top: 0%;
+  color: #C7C7BB;
+  background-color: #334738;
+}
+
+.bottom {
+  align-self: flex-end;
 }
 
 .push {

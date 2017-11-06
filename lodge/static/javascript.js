@@ -40,7 +40,4 @@ function myMap() {
     });
   });
 
-  $('#myCarousel2').on('slid.bs.carousel', function () {
-  // do something…
-  console.log("im hit");
-})
+  
