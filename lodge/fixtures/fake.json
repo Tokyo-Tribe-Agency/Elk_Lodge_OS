@@ -97,7 +97,7 @@
       "payment_name": "Kevin Bacon",
       "payment_method": "Credit Card",
       "payment_total_amount": "500",
-      "payment_date": "2017-04-25",
+      "payment_date": "2016-04-25",
       "payment_time": "7:00 PM"
 
     }
@@ -121,7 +121,7 @@
       "event_name": "Golf'N for Gandolf", 
       "event_type": "Annual Golf",
       "event_description": "Golf Charity Event",
-      "event_date":"2017-04-25",
+      "event_date":"2016-04-25",
       "event_location": "Nashville",
       "event_time": "3:30 PM"
     }
@@ -133,7 +133,7 @@
       "event_name": "Golf'N for Gumbo", 
       "event_type": "Annual Golf",
       "event_description": "Golf Charity Event",
-      "event_date":"2017-04-25",
+      "event_date":"2016-04-25",
       "event_location": "Nashville",
       "event_time": "3:30 PM"
     }

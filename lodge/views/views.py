@@ -17,9 +17,17 @@ def index(request):
 	
 	today = date.today()
 	today_filter =  Events.objects.filter(event_date__year=today.year)
-	
+	for events in today_filter:
+		print("name", events.event_name)
 	return render(request, template_name, {'members': all_members, 'events': all_events, 'today': today_filter})
 
+def login(request):
+	template_name = 'login.html'
+	return render(request, template_name, {})
+
+def register(request):
+	template_name = 'register.html'
+	return render(request, template_name, {})
 
 # def about(request):
 # 	template_name = 'about.html'

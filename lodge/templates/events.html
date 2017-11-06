@@ -1,14 +1,12 @@
 <div class="jumbotron text-center slideBox">
-<div  class="carousel slide text-center" data-ride="carousel">
+<div id="carousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+    
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       {% for event in events %}
+      {% if forloop.first %} 
+
       <div class="item active">
   		<div class="card">
 				<div class="card-block">
@@ -19,14 +17,28 @@
 				</div>		
 		</div>
 	</div>
+
+  {% else %}
+  <div class="item">
+      <div class="card">
+        <div class="card-block">
+          <!-- <img src="http://lorempixel.com/200/200/business"> -->
+        <h4 class="card-title">{{event.event_name}}</h4>
+        <p class="card-text">{{event.event_description}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>    
+    </div>
+  </div>
+
+    {% endif %}
 		{% endfor %}
     </div>
 
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>

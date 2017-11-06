@@ -6,11 +6,7 @@ function myMap() {
     marker.setMap(map);
 }
 
-$(document).ready(function(){
-    console.log("i work");
-  $('.carousel').carousel({
-    interval: 20
-    });
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -43,4 +39,8 @@ $(document).ready(function(){
         }
     });
   });
+
+  $('#myCarousel2').on('slid.bs.carousel', function () {
+  // do something…
+  console.log("im hit");
 })

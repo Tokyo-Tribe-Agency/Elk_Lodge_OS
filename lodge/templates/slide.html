@@ -1,45 +1,12 @@
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Elks invest in their communities through programs that help children grow up healthy and drug-free, meet the needs of today's veterans, and improve quality of life.</h2>
-  <br>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/400/200/business">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/400/200/business">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/400/200/business">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
-      </div>
-    </div>
-  </div>
-  </div>
-  <br>
 
+<div id="myCarousel2" class="carousel slide text-center" data-ride="carousel">
 
-<!-- <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-	
-	<ol class="carousel-indicators">
-	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	    <li data-target="#myCarousel" data-slide-to="1"></li>
-	    <li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>
 
    	<div class="carousel-inner" role="listbox">
-	{% for events in today_filter %}
-    <div class="item">
+	{% for events in today %}
+   {% if forloop.first %} 
+
+    <div class="item active">
         <div class="card" style="width: 20rem;">
 				<div class="card-block">
 					<img src="http://lorempixel.com/400/200/business">
@@ -49,14 +16,29 @@
 			</div>
 		</div>
 	</div>
-	{% endfor %}
+  
+  {% else %}
+  <div class="item">
+        <div class="card" style="width: 20rem;">
+        <div class="card-block">
+          <img src="http://lorempixel.com/400/200/business">
+        <h4 class="card-title">{{events.event_name}}</h4>
+        <h3>{{events.event_type}}</h3>
+        <h3>{{events.event_description}}</h3>
+      </div>
+    </div>
+  </div>
+
+	{% endif %}
+  {% endfor %}
+
 	</div>
 
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#myCarousel2"  role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control" href="#myCarousel2"  role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
