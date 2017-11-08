@@ -239,8 +239,15 @@ form {
   }
 }
 
+.greenblock {
+  background-color: #334738;
+  color: #F9D663;
+}
 
 
+.topslide {
+  border-radius: 7%;
+}
 
 .signin {
   width: auto;
@@ -266,7 +273,43 @@ form {
   align-self: flex-end;
 }
 
+.move-it {
+  padding-right: 10%;
+}
+
+.move {
+  border-style: none;
+  font-family: Brush Script MT;
+  font-size: 1.5em;
+  background-color: #F9D663;
+  color: #334738;
+  border-radius: 45%;
+  float: right;
+  width: 90px;
+  padding: 10px 10px;
+}
+
+.carousel-indicators 
+.active {
+  background-color: transparent !important;
+  color: transparent !important;
+  border-style: solid white;
+}
+
+.carousel-indicators li {
+  opacity: .7;
+  background-color: white !important;
+  color: white !important;
+  border: solid white 1px;
+}
+
 .push {
   padding-right: 5%;
   float: right;
+}
+
+
+.card-style {
+  height: 300px;
+  width: 30%;
 }

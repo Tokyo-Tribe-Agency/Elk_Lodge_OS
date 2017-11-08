@@ -1,7 +1,7 @@
 <div class="container-fluid">	
 		<div class="row text-center">
-			<h2>Who are the Franklin Elks?</h2>
-			<h5>{% lorem %}</h5>
+			<h3>Who are the Franklin Elks?</h3>
+			<h5 class="text-center">{% lorem %}</h5>
 		</div>
 	</div>
 <div id="about" class="row text-center"> 
@@ -11,10 +11,10 @@
 		{% for elk in members%}
 		{% if forloop.first %} 
 
-      <div class="item active">
+      <div class="item active row">
   		<div class="card">
 				<div class="card-block">
-			  		<img class="card-img-top" src="{{elk.elk_photo}}" alt="Card image cap">
+			  		<img class="card-img-top card-style" src="{{elk.elk_photo}}" alt="Card image cap">
 			  			<div class="card-block">
 			    			<h4 class="card-title">{{elk.first_name}}</h4>
 			    			<p class="card-text">{{elk.last_name}}</p>

@@ -52,6 +52,58 @@
     }
   },
   {
+    "model": "lodge.Elks",
+    "pk": 5,
+    "fields": {
+      "first_name" : "Brace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 6,
+    "fields": {
+      "first_name" : "Space",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 7,
+    "fields": {
+      "first_name" : "Pace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 8,
+    "fields": {
+      "first_name" : "Lace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
     "model": "lodge.Photos",
     "pk": 1,
     "fields": {
