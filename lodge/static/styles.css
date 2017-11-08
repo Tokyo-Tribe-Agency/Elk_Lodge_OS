@@ -1,6 +1,4 @@
-  body {
-      font-family: Montserrat, sans-serif;
-  }
+ 
 
   h1 {
     font-family: Palatino Linotype, serif;
@@ -23,9 +21,24 @@
 
   }
 
+  h5 {
+    color: #BFBFBF;
+
+  }
+
+  /*fonts*/
+
+  .handy {
+    font-family: Optima sans-serif;
+    font-style: oblique;
+    font-size: 1.5em;
+    word-spacing: 3px;
+  }
+
+
 
   .slideBox {
-    height: 600px;
+    height: 500px;
     width: auto;
   }
 
@@ -35,29 +48,53 @@
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+
   .container-fluid {
       padding: 60px 50px;
   }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
- 
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
- 
+  
+
+ /*carousel styles*/
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none !important;
+}
+
+.carousel-indicators 
+.active {
+  background-color: transparent !important;
+  color: transparent !important;
+  border-style: solid white;
+}
+
+.carousel-indicators li {
+  opacity: .7;
+  background-color: white !important;
+  color: white !important;
+  border: solid white 1px;
+}
+
+.carousel-control.right, .carousel-control.left, .glyphicon-chevron a span {
+  background-color: transparent !important;
+  color: #383838 !important;
+}
+
+.card-img-top, .d-block, .img-fluid {
+  width: 150px;
+  height: auto;
+}
+
+
+
+
+/*pricing section*/
+
   .panel {
       /*border: 1px solid #f4511e; */
       border-radius:0 !important;
       transition: box-shadow 0.5s;
-      height: 30% !important;
+      height: 100% !important;
+      position: relative;
   }
   .panel:hover {
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
@@ -80,6 +117,16 @@
   }
   .panel-footer {
       background-color: white !important;
+      position: absolute;
+      align-content: center;
+      margin: auto;
+      padding-left: 35%;
+      bottom: 0;
+      border-top: transparent;
+
+  }
+  .panel-body {
+    border-bottom: 1px solid #ddd;  
   }
   .panel-footer h3 {
       font-size: 32px;
@@ -89,36 +136,30 @@
       font-size: 14px;
   }
   .panel-footer .btn {
-      margin: 15px 0;
+      /*margin: 15px 0;*/
       background-color: #303030;
       color: #fff;
+  }
+  .panel-sizing {
+    height: 500px;
   }
 
 
 
-
-
-
-
+/*navigation styles*/
 
   .navbar {
       margin-bottom: 0;
       background-color: #EDF0F2;
       z-index: 9999;
       border: 0;
-      font-size: 12px !important;
+      font-size: 20px !important;
+      font-family: Palatino Linotype, serif;
       line-height: 1.42857143 !important;
       letter-spacing: 4px;
       border-radius: 0;
-      font-family: Montserrat, sans-serif;
   }
-  .yay {
-      border-radius: 7%;
-      color: #C7C7BB;
-      background-color: #334738;
-      float: right;
-  }
-  
+
   .navbar li a, .navbar .navbar-brand {
       color: #334738 !important;
   }
@@ -130,8 +171,26 @@
       border-color: transparent;
       color: #fff !important;
   }
+  .navbar button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-family: Optima sans-serif;
+    /*text-transform: lowercase;*/
+    font-style: oblique;
+    letter-spacing: 3px;
+    background-color: transparent; 
+    border: solid 2px #334738;
+    float: right;
+    
+}
+
+.navbar button:hover {
+    background-color: #334738; /* Green */
+    color: #FFF;
+}
 
 
+/* footer style */
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
@@ -176,8 +235,8 @@
       margin: 25px 0;
     }
     .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
+        /*width: 100%;*/
+        /*margin-bottom: 35px;*/
     }
   }
   
@@ -239,24 +298,26 @@ form {
   }
 }
 
+
+/* about section */
 .greenblock {
   background-color: #334738;
   color: #F9D663;
 }
 
 
+
+
 .topslide {
   border-radius: 7%;
 }
 
-.signin {
-  width: auto;
-  border-radius: 7%;
-
+.leftpadding{
+  padding-left: 5%;
 }
 
-.blurg {
-  padding-left: 5%;
+.band, .leftpadding h3, h4 {
+  color: white;
 }
 
 .band {
@@ -265,21 +326,26 @@ form {
   position: relative;
   text-transform: capitalize;
   padding-top: 0%;
-  color: #C7C7BB;
+  color: #303030;
+  font-size: 1.2em; 
   background-color: #334738;
+}
+
+.band, .col-sm-3 {
+  padding-bottom: 1%;
 }
 
 .bottom {
   align-self: flex-end;
 }
 
-.move-it {
-  padding-right: 10%;
-}
+
 
 .move {
   border-style: none;
-  font-family: Brush Script MT;
+  font-family: Optima sans-serif;
+  text-transform: lowercase;
+  font-style: oblique;
   font-size: 1.5em;
   background-color: #F9D663;
   color: #334738;
@@ -287,29 +353,34 @@ form {
   float: right;
   width: 90px;
   padding: 10px 10px;
+  margin-bottom: 5%;
 }
 
-.carousel-indicators 
-.active {
-  background-color: transparent !important;
-  color: transparent !important;
-  border-style: solid white;
+.move, .glyphicon {
+  color: #BFBFBF;
+
 }
 
-.carousel-indicators li {
-  opacity: .7;
-  background-color: white !important;
-  color: white !important;
-  border: solid white 1px;
-}
 
 .push {
   padding-right: 5%;
   float: right;
 }
 
+.pricescript {
+  font-family: Optima sans-serif;
+  font-style: oblique;
+  font-size: 1.5em;
+  word-spacing: 3px;
 
-.card-style {
-  height: 300px;
-  width: 30%;
+}
+
+
+.smallscript {
+  font-family: Optima sans-serif;
+  font-style: oblique;
+  text-transform: lowercase;
+  font-size: .5em;
+  word-spacing: 3px;
+
 }

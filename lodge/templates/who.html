@@ -1,52 +1,58 @@
+{% load staticfiles %}
 <div class="container-fluid">	
 		<div class="row text-center">
 			<h3>Who are the Franklin Elks?</h3>
-			<h5 class="text-center">{% lorem %}</h5>
+			<h5 class="text-center handy">{% lorem %}</h5>
 		</div>
 	</div>
 <div id="about" class="row text-center"> 
-
+		<div class="col-lg-4"></div>
 	<div id="carouselElks" class="carousel slide media-carousel" id="media">
-		<div class="carousel-inner" role="listbox">
+	<div class="col-lg-6 carousel-inner" role="listbox">
 		{% for elk in members%}
 		{% if forloop.first %} 
 
-      <div class="item active row">
+      <div class="item active">
   		<div class="card">
-				<div class="card-block">
-			  		<img class="card-img-top card-style" src="{{elk.elk_photo}}" alt="Card image cap">
+				<!-- <div class="card-block"> -->
+			  		<img class="card-img-top d-block img-fluid" src="{{elk.elk_photo}}" alt="Card image cap">
 			  			<div class="card-block">
 			    			<h4 class="card-title">{{elk.first_name}}</h4>
 			    			<p class="card-text">{{elk.last_name}}</p>
-			  			</div>
+			  		</div>
+
 				</div>
 			</div>
-		</div>
+		<!-- </div> -->
 			{% else %}
 			<div class="item">
-  		<div class="card">
-				<div class="card-block">
-			  		<img class="card-img-top" src="{{elk.elk_photo}}" alt="Card image cap">
+  				<div class="card">
+
+					<!-- <div class="card-block"> -->
+			  		<img class="card-img-top d-block img-fluid" src="{% static 'assets/professionalshotcopy.jpg' %}" alt="Card image cap">
 			  			<div class="card-block">
 			    			<h4 class="card-title">{{elk.first_name}}</h4>
 			    			<p class="card-text">{{elk.last_name}}</p>
 			  			</div>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 			{% endif %}
 		{% endfor %}
 		</div>
 
+
 		<a class="left carousel-control" href="#carouselElks" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carouselElks" role="button" data-slide="next">
+    	</a>
+    
+    	<a class="right carousel-control" href="#carouselElks" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
-    </a>
-  </div>
+    	</a>
+			<div class="col-lg-4"></div>
+</div>
 </div>
 	
 	
