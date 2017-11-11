@@ -15,6 +15,7 @@
   }
 
   h4 {
+    /*color: #37474f;*/
     font-family: Montserrat, sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -26,6 +27,40 @@
 
   }
 
+  .card-style {
+    margin: auto;
+    width: 50%;
+    background-color: #37474f;
+    font-family: Montserrat, sans-serif; 
+    letter-spacing: 1px;
+    color: white !important;
+    width: 263px;
+    border-radius: 5%;
+    padding-bottom: .5%;
+
+
+  }
+
+  .cardSize {
+  width: 263px;
+  height: 329px;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+}
+
+.card-block ul li img {
+  width: 23.76px !important;
+  height: 23.76px !important;
+  padding-bottom: 1.5%;
+}
+.card-block ul li {
+
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
   /*fonts*/
 
   .handy {
@@ -33,27 +68,66 @@
     font-style: oblique;
     font-size: 1.5em;
     word-spacing: 3px;
+    transition: background-color 0.5s ease;
   }
 
+  .handybutton {
+    font-family: Optima sans-serif;
+    font-style: oblique;
+    background-color: #fff9c4;
+    font-size: 1.5em;
+    word-spacing: 3px;
+    transition: background-color 0.5s ease;
+  }
 
+   .handybutton:hover {
+    background-color: #334738; /* Green */
+    color: #FFF;
+
+  }
+
+ .handy, h4{
+  color: #37474f;
+  text-transform: lowercase;
+
+}
+
+ .handy, .card-title{
+  color: #37474f;
+  text-transform: lowercase;
+
+}
 
   .slideBox {
     height: 500px;
     width: auto;
   }
 
-  .jumbotron {
-      background-color: #EDF0F2;
+  .padding {
+    padding-top: 100px;
+  }
+
+  .jumbotron1 {
+
+    /*height: 100%;*/
+    background-color: #EDF0F2;
+    background: url(assets/header.svg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
       color:  #303030;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
 
+
+
   .container-fluid {
       padding: 60px 50px;
   }
   
-
+  
  /*carousel styles*/
 
 .carousel-control.right, .carousel-control.left {
@@ -80,8 +154,8 @@
 }
 
 .card-img-top, .d-block, .img-fluid {
-  width: 150px;
-  height: auto;
+  /*width: 150px;*/
+  /*height: auto;*/
 }
 
 
@@ -148,10 +222,12 @@
 
 /*navigation styles*/
 
+
   .navbar {
       margin-bottom: 0;
-      background-color: #EDF0F2;
-      z-index: 9999;
+      background-color: transparent;
+      background: transparent;
+      border-color: transparent;
       border: 0;
       font-size: 20px !important;
       font-family: Palatino Linotype, serif;
@@ -161,7 +237,7 @@
   }
 
   .navbar li a, .navbar .navbar-brand {
-      color: #334738 !important;
+      color: #09260c !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
       color: white !important;
@@ -179,7 +255,7 @@
     font-style: oblique;
     letter-spacing: 3px;
     background-color: transparent; 
-    border: solid 2px #334738;
+    border: solid 2px #09260c;
     float: right;
     
 }
@@ -189,6 +265,9 @@
     color: #FFF;
 }
 
+  footer {
+    background-color: #37474f;
+  }
 
 /* footer style */
   footer .glyphicon {
@@ -301,14 +380,19 @@ form {
 
 /* about section */
 .greenblock {
-  background-color: #334738;
+  background-color: #09260c;
   color: #F9D663;
 }
 
 
+#myCarousel2 h5 {
+  padding-bottom: 5%;
 
+}
 
 .topslide {
+  width: 378px;
+  height: 306px;
   border-radius: 7%;
 }
 
@@ -328,7 +412,7 @@ form {
   padding-top: 0%;
   color: #303030;
   font-size: 1.2em; 
-  background-color: #334738;
+  background-color: #09260c;
 }
 
 .band, .col-sm-3 {
@@ -348,7 +432,7 @@ form {
   font-style: oblique;
   font-size: 1.5em;
   background-color: #F9D663;
-  color: #334738;
+  color: #09260c;
   border-radius: 45%;
   float: right;
   width: 90px;

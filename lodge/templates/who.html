@@ -14,27 +14,42 @@
 
       <div class="item active">
   		<div class="card">
-				<!-- <div class="card-block"> -->
-			  		<img class="card-img-top d-block img-fluid" src="{{elk.elk_photo}}" alt="Card image cap">
+				<div class="card-block">
+			  		<img class="card-img-top d-block img-fluid cardSize" src="{{elk.elk_photo}}" alt="Card image cap">
 			  			<div class="card-block">
-			    			<h4 class="card-title">{{elk.first_name}}</h4>
-			    			<p class="card-text">{{elk.last_name}}</p>
+			  				<div class="card-style">
+			  					
+			    			<h3 class="card-title">{{elk.first_name}}</h3>
+			    			<h4 class="card-title">{{elk.last_name}}</h4>
+			    			<ul>
+			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logot.svg' %}" alt="logo" /></li>
+			    				<li><img  class="img-fluid card-title card-style" src="{% static 'assets/logoL.svg' %}" alt="logo" /></li>
+
+			    			</ul>
+			  				</div>
 			  		</div>
 
 				</div>
 			</div>
-		<!-- </div> -->
+		</div>
 			{% else %}
 			<div class="item">
   				<div class="card">
 
-					<!-- <div class="card-block"> -->
-			  		<img class="card-img-top d-block img-fluid" src="{% static 'assets/professionalshotcopy.jpg' %}" alt="Card image cap">
+					<div class="card-block">
+			  		<img class="card-img-top d-block img-fluid cardSize" src=" {{elk.elk_photo}}"  alt="Card image cap">
 			  			<div class="card-block">
-			    			<h4 class="card-title">{{elk.first_name}}</h4>
-			    			<p class="card-text">{{elk.last_name}}</p>
+			  				<div class="card-style">
+			    			<h3 class="card-title">{{elk.first_name}}</h3>
+			    			<h4 class="card-title">{{elk.last_name}}</h4>
+			    			<ul>
+			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logot.svg' %}" alt="logo" /></li>
+			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logoL.svg' %}" alt="logo" /></li>
+
+			    			</ul>
 			  			</div>
-				<!-- </div> -->
+			  			</div>
+				</div>
 			</div>
 		</div>
 			{% endif %}
