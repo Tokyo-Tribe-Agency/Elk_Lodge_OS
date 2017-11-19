@@ -1,61 +1,224 @@
 [
   {
-    "model": "lodge.Payment",
+    "model": "lodge.Elks",
     "pk": 1,
     "fields": {
-      "payment_data": "datatatatatat" 
+      "first_name" : "kevin",
+      "last_name": "Bacon",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 1 
     }
   },
   {
-    "model": "lodge.Due",
-    "pk": 1,
-    "fields": {
-      "date": "2017-04-25",
-      "date_paid": "2017-04-25"
-    }
-  },
-  {
-    "model": "lodge.Member",
-    "pk": 1,
-    "fields": {
-      "first_name": "Paul",
-      "last_name": "McCartney",
-      "date_joined":"2017-04-25",
-      "active": "True",
-      "payment": 1,
-      "due": 1
-    }
-  },
-  {
-    "model": "lodge.Member",
+    "model": "lodge.Elks",
     "pk": 2,
     "fields": {
-      "first_name": "Yoko",
-      "last_name": "Ono",
-      "date_joined":"2017-04-25",
-      "active": "True",
-      "payment": 1,
-      "due": 1
+      "first_name" : "Tina",
+      "last_name": "Turner",
+      "nickname": "Queen Mary",
+      "email_address": "tina@email.com",
+      "linked_in_url": "imtina@linkedin.com",
+      "date_joined": "2017-03-25",
+      "elk_photo" : 2 
     }
   },
   {
-    "model": "lodge.Event",
+    "model": "lodge.Elks",
+    "pk": 3,
+    "fields": {
+      "first_name" : "Demi",
+      "last_name": "Lovato",
+      "nickname":"Footloose",
+      "email_address": "demi@email.com",
+      "linked_in_url": "imdemi@linkedin.com",
+      "date_joined": "2017-06-25",
+      "elk_photo" : 3 
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 4,
+    "fields": {
+      "first_name" : "Grace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 5,
+    "fields": {
+      "first_name" : "Brace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 6,
+    "fields": {
+      "first_name" : "Space",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 7,
+    "fields": {
+      "first_name" : "Pace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Elks",
+    "pk": 8,
+    "fields": {
+      "first_name" : "Lace",
+      "last_name": "Adler",
+      "nickname":"Footloose",
+      "email_address": "kevin@email.com",
+      "linked_in_url": "imkevin@linkedin.com",
+      "date_joined": "2017-04-25",
+      "elk_photo" : 3
+    }
+  },
+  {
+    "model": "lodge.Photos",
     "pk": 1,
     "fields": {
-      "title": "Party",
-      "date": "2017-04-25",
-      "attendence": [1, 2] ,
-      "location" : "Salt Lake City"
+      "photo_name": "fake photo",
+      "photo_url": "http://placehold.it/150x150",
+      "photo_type": "good"
+
     }
   },
   {
-    "model": "lodge.Event",
+    "model": "lodge.Photos",
     "pk": 2,
     "fields": {
-      "title": "Party No Ono",
-      "date": "2017-04-25",
-      "attendence": [1],
-      "location" : "Salt Lake City"
+      "photo_name": "fake photo",
+      "photo_url": "http://placehold.it/150x150",
+      "photo_type": "good"
+
+    }
+  },
+  {
+    "model": "lodge.Photos",
+    "pk": 3,
+    "fields": {
+      "photo_name": "fake photo",
+      "photo_url": "http://placehold.it/150x150",
+      "photo_type": "good"
+
+    }
+  },
+  {
+    "model": "lodge.Donations",
+    "pk": 1,
+    "fields": {
+      "donation_type": "cash",
+      "donation_amount":"500",
+      "donation_date": "2017-04-25"
+    }
+  },
+  {
+    "model": "lodge.Payments",
+    "pk": 2,
+    "fields": {
+      "payment_name": "Kevin Bacon",
+      "payment_method": "Credit Card",
+      "payment_total_amount": "500",
+      "payment_date": "2016-04-25",
+      "payment_time": "7:00 PM"
+
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 1,
+    "fields": {
+      "event_name": "Golf'N for Good", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2017-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 2,
+    "fields": {
+      "event_name": "Golf'N for Gandolf", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2016-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 3,
+    "fields": {
+      "event_name": "Golf'N for Gumbo", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2016-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Events",
+    "pk": 4,
+    "fields": {
+      "event_name": "Golf'N for Gravy", 
+      "event_type": "Annual Golf",
+      "event_description": "Golf Charity Event",
+      "event_date":"2017-04-25",
+      "event_location": "Nashville",
+      "event_time": "3:30 PM"
+    }
+  },
+  {
+    "model": "lodge.Newsletter",
+    "pk": 2,
+    "fields": {
+      "subscriber_first_name": "Clara",
+      "subscriber_last_name": "Noggle",
+      "subscriber_email_address": "noggle@email.com"
+
+    }
+  },
+  {
+    "model": "lodge.Inquiry",
+    "pk": 1,
+    "fields": {
+      "inquirer_first_name": "Luke",
+      "inquirer_last_name":"Bryan"
+
     }
   }
 ]
