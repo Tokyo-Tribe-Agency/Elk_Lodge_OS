@@ -1,6 +1,3 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
 <head>
 	<meta charset="utf-8">
 	<title>ElkLodge</title>
@@ -8,6 +5,8 @@
 </head>
 <body>
 	{%include "navbar.html"%}
+ 
+
 	<div class="container">
 
 	<div class="wrapper">
@@ -15,17 +14,22 @@
 			<div class="col-sm"></div>
 			<div class="col-sm">
 			    <form class="form-signin">       
-			      <h2 class="form-signin-heading">Please Enter your email</h2>
-			      	<input type="text" class="form-control" name="email" placeholder="Email" required="" autofocus=""  data-toggle="tooltip" title="please use this email for your login"/>
+			      <h2 class="form-signin-heading">Please Wedding</h2>
+			      	<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
 			      	<br>
-			      	<input type="Username" class="form-control" name="username" placeholder="Username" required=""  data-toggle="tooltip" title="use this username to login"/>
-			      	<br>
-			      	<input type="Password" class="form-control" name="password" placeholder="Password" required=""  data-toggle="tooltip" title="please use your favorite moose's name"/><br>
-			      	<div class="row">
+			      	<input type="Password" class="form-control" name="password" placeholder="Password" required=""/> 
+			      	<br>     
+			      		
+	    			<h5>
+	    				<a>Forgot your Date? </br>
+	    				Click here</a>
+	    			</h5>
+	    			<div class="row">
 			      	<div class="col-sm push">     
-					   <button class="btn btn-lg btn-block register_button signin" type="submit">Register</button>   
+					   <button class="btn btn-lg btn-block register_button signin" type="submit"> signin</button>   
 					</div>
 				</div>
+			      		
 			    </form>
 
 			</div>
@@ -33,6 +37,7 @@
 		<div class="col-sm"></div>
   	</div>
   	</div>
+
 	{% include "footer.html"%}
 	
 

@@ -14,7 +14,7 @@ def index(request):
 	template_name = 'index.html'
 	all_members = Elks.objects.all() 
 	all_events = Events.objects.all()
-	
+	print("request", request.path)	
 	today = date.today()
 	today_filter =  Events.objects.filter(event_date__year=today.year)
 	for events in today_filter:
@@ -25,8 +25,13 @@ def login(request):
 	template_name = 'login.html'
 	return render(request, template_name, {})
 
+def wedding(request):
+	template_name = 'wedding.html'
+	return render(request, template_name, {})
+
 def register(request):
 	template_name = 'register.html'
+	print("request", request.path)
 	return render(request, template_name, {})
 
 # def about(request):

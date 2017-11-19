@@ -13,14 +13,32 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar">
-        <li><a href="#login">Login</a></li>
+        {% if request.path == '/' %}
+        <li><a href="{{'/login'}}">Login</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#events">Events</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Events
+          </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="#">Action</a>
+            </div>
+        </li>
         <li><a href="#membership">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- <li id="yay"><a href="#signup">signup</a></li> -->
+        {% endif %}
+
+        {% if request.path == '/register' %}
+        <li><a href="{{'/'}}">Home</a></li>
+        <li><a href="{{'/login'}}">Login</a></li>
+        {% endif %}
+
+        {% if request.path == '/login' %}
+        <li><a href="{{'/'}}">Home</a></li>
+        {% endif %}
       </ul>
-      <button class="btn btn-lg">SignUp</button>
+      <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

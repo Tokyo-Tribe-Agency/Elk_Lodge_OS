@@ -241,7 +241,7 @@
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
       color: white !important;
-      background-color: #354F52 !important;
+      background-color: #09260c; !important;
   }
   .navbar-default .navbar-toggle {
       border-color: transparent;
@@ -263,6 +263,15 @@
 .navbar button:hover {
     background-color: #334738; /* Green */
     color: #FFF;
+}
+
+.navbar button a {
+  color: #334738;
+  
+}
+.navbar button a:hover {
+  color: white;
+  text-decoration: none;
 }
 
   footer {
@@ -488,13 +497,13 @@ form {
     text-transform: lowercase;
     font-style: oblique;
     letter-spacing: 3px;
-    background-color: transparent; 
+    background-color: white; 
     border: solid 2px #2b3b2f;
-    color: #fff;
+    color: #2b3b2f;
 }
 .register_button:hover {
-  background-color: #FFF;/* Green */
-  color: #334738;
+  background-color: #334738;/* Green */
+  color: white;
 
 }
 
