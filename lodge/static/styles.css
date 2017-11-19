@@ -266,7 +266,8 @@
 }
 
   footer {
-    background-color: #37474f;
+    color: #fff;
+    background-color:#334738;
   }
 
 /* footer style */
@@ -460,6 +461,7 @@ form {
 }
 
 
+
 .smallscript {
   font-family: Optima sans-serif;
   font-style: oblique;
@@ -468,3 +470,57 @@ form {
   word-spacing: 3px;
 
 }
+
+
+
+
+/* styling for register and login pages*/
+
+
+
+
+
+
+.register_button{
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-family: Optima sans-serif;
+    text-transform: lowercase;
+    font-style: oblique;
+    letter-spacing: 3px;
+    background-color: transparent; 
+    border: solid 2px #2b3b2f;
+    color: #fff;
+}
+.register_button:hover {
+  background-color: #FFF;/* Green */
+  color: #334738;
+
+}
+
+.form-signin {
+  background-color:    #405946; /* Green */
+  border: solid 2px #334738;
+  text-align: center;
+  text-transform: lowercase;
+  }
+
+.form-signin-heading{
+  font-family: Palatino Linotype, serif;
+  letter-spacing: 3px
+  }
+
+input.form-control::-webkit-input-placeholder {
+  text-align: center;
+}
+
+form a {
+  color: #89a991;
+}
+
+form a:hover {
+  color: #fff;
+  text-decoration: none;  
+}
+
+

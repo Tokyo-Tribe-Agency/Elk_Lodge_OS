@@ -40,4 +40,9 @@ function myMap() {
     });
   });
 
+
+$(function () {
+  console.log("ima tooltip");
+  $('[data-toggle="tooltip"]').tooltip()
+})
   
