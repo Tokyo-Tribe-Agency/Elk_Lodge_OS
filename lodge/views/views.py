@@ -26,7 +26,7 @@ def login(request):
 	return render(request, template_name, {})
 
 def wedding(request):
-	template_name = 'wedding.html'
+	template_name = 'weddings.html'
 	return render(request, template_name, {})
 
 def register(request):
