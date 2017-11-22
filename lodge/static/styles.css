@@ -1,13 +1,6 @@
  
 
-  h1 {
-    font-family: Palatino Linotype, serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
-  }
-
-  h3 {
+  h1, h3, h4, .form-signin-heading  {
     font-family: Palatino Linotype, serif;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -15,17 +8,146 @@
   }
 
   h4 {
-    /*color: #37474f;*/
     font-family: Montserrat, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
   }
 
   h5 {
     color: #BFBFBF;
 
   }
+
+/* handwritten font elements */
+
+  .handscript, .handscript button, .navbar button, .register_button{
+    font-family: Optima sans-serif;
+    font-style: oblique;
+    font-size: 1.5em;
+    word-spacing: 3px;
+    transition: background-color 0.5s ease;
+  }
+
+  .handscript button {
+    background-color: #fff9c4;
+  }
+
+  .handscript button:hover {
+    background-color: #334738; 
+    color: #FFF;
+  }
+
+ .handscript > h4, .navbar button {
+  color: #37474f;
+  text-transform: lowercase;
+}
+
+ .handscript > .card-title{
+  color: #37474f;
+  text-transform: lowercase;
+}
+
+.smallscript {
+  font-size: .5em;
+}
+
+  /*navigation styles --navbar.html*/
+
+
+  .navbar {
+      margin-bottom: 0;
+      background-color: transparent;
+      background: transparent;
+      border-color: transparent;
+      border: 0;
+      font-size: 20px !important;
+      font-family: Palatino Linotype, serif;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+      color: #09260c !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #09260c; !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+
+
+  .navbar button {
+    letter-spacing: 3px;
+    border: solid 2px #09260c;
+    float: right;
+    color: #334738 !important;   
+}
+
+.navbar button:hover {
+    border-color:  #56765e; 
+    box-shadow: 1px 1px;
+}
+
+
+.navbar button a {
+  text-decoration: none;
+  color: #334738 !important;   
+}
+
+/*jumbotron elk svg styling --jumbotron.html*/
+  .leftpadding{
+    padding-left: 5%;
+  }
+
+
+  .slideBox {
+    height: 500px;
+    width: auto;
+  }
+
+  .padding {
+    padding-top: 100px;
+  }
+
+  .jumbotron1 {
+    background-color: #EDF0F2;
+    background: url(assets/header.svg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    color:  #303030;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  
+.band, .leftpadding h3, h4 {
+  color: #fff;
+}
+
+.band {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  text-transform: capitalize;
+  padding-top: 0%;
+  color: #303030;
+  font-size: 1.2em; 
+  background-color: #09260c;
+}
+
+.band, .col-sm-3 {
+  padding-bottom: 1%;
+}
+
+/*slideshow styling - cards --about.html, events.html*/
+  
 
   .card-style {
     margin: auto;
@@ -53,82 +175,33 @@
   height: 23.76px !important;
   padding-bottom: 1.5%;
 }
-.card-block ul li {
 
+.card-block ul li {
   display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
 
 }
-  /*fonts*/
 
-  .handy {
-    font-family: Optima sans-serif;
-    font-style: oblique;
-    font-size: 1.5em;
-    word-spacing: 3px;
-    transition: background-color 0.5s ease;
-  }
-
-  .handybutton {
-    font-family: Optima sans-serif;
-    font-style: oblique;
-    background-color: #fff9c4;
-    font-size: 1.5em;
-    word-spacing: 3px;
-    transition: background-color 0.5s ease;
-  }
-
-   .handybutton:hover {
-    background-color: #334738; /* Green */
-    color: #FFF;
-
-  }
-
- .handy, h4{
-  color: #37474f;
-  text-transform: lowercase;
+/*about.html*/
+#myCarousel2 h5 {
+  padding-bottom: 5%;
 
 }
-
- .handy, .card-title{
-  color: #37474f;
-  text-transform: lowercase;
-
+.greenblock {
+  background-color: #09260c;
+  color: #F9D663;
+}
+.topslide {
+  width: 378px;
+  height: 306px;
+  border-radius: 7%;
 }
 
-  .slideBox {
-    height: 500px;
-    width: auto;
-  }
-
-  .padding {
-    padding-top: 100px;
-  }
-
-  .jumbotron1 {
-
-    /*height: 100%;*/
-    background-color: #EDF0F2;
-    background: url(assets/header.svg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
-      color:  #303030;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
 
 
-
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  
-  
- /*carousel styles*/
+/*slideshow styling - carousel --about.html, events.html */
 
 .carousel-control.right, .carousel-control.left {
   background-image: none !important;
@@ -143,9 +216,9 @@
 
 .carousel-indicators li {
   opacity: .7;
-  background-color: white !important;
+  background-color: #fff !important;
   color: white !important;
-  border: solid white 1px;
+  border: solid #fff 1px;
 }
 
 .carousel-control.right, .carousel-control.left, .glyphicon-chevron a span {
@@ -153,18 +226,14 @@
   color: #383838 !important;
 }
 
-.card-img-top, .d-block, .img-fluid {
-  /*width: 150px;*/
-  /*height: auto;*/
+.wrapper {  
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-
-
-
-/*pricing section*/
+/* Membership pricing panels section --- prices.html*/
 
   .panel {
-      /*border: 1px solid #f4511e; */
       border-radius:0 !important;
       transition: box-shadow 0.5s;
       height: 100% !important;
@@ -174,43 +243,32 @@
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      /*border: 1px solid #303030;*/
       background-color: #fff !important;
       color: #303030;
   }
   .panel-heading {
       color: lightblue !important;
-      /*background-color: #303030 !important;*/
       padding: 25px;
       border-bottom: 2px solid lightblue;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
-
   }
   .panel-footer {
-      background-color: white !important;
+      background-color: #fff !important;
       position: absolute;
       align-content: center;
       margin: auto;
       padding-left: 35%;
       bottom: 0;
       border-top: transparent;
-
   }
   .panel-body {
     border-bottom: 1px solid #ddd;  
   }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
+  
   .panel-footer .btn {
-      /*margin: 15px 0;*/
       background-color: #303030;
       color: #fff;
   }
@@ -218,76 +276,6 @@
     height: 500px;
   }
 
-
-
-/*navigation styles*/
-
-
-  .navbar {
-      margin-bottom: 0;
-      background-color: transparent;
-      background: transparent;
-      border-color: transparent;
-      border: 0;
-      font-size: 20px !important;
-      font-family: Palatino Linotype, serif;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-  }
-
-  .navbar li a, .navbar .navbar-brand {
-      color: #09260c !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: white !important;
-      background-color: #09260c; !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-
-
-  .navbar button {
-    font-family: Optima sans-serif;
-    text-transform: lowercase;
-    font-style: oblique;
-    letter-spacing: 3px;
-    border: solid 2px #09260c;
-    float: right;
-    color: #334738 !important;   
-}
-
-.navbar button:hover {
-    border-color:  #56765e; 
-    box-shadow: 1px 1px;
-}
-
-
-.navbar button a {
-  text-decoration: none;
-  color: #334738 !important;   
-}
-
-
-
-  footer {
-    color: #fff;
-    background-color:#334738;
-  }
-
-/* footer style */
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-
-
-
-
-  
   /*.slideanim {visibility:hidden;}*/
   .slide {
       animation-name: slide;
@@ -308,7 +296,6 @@
   }
   @-webkit-keyframes slide {
     0% {
-      /*opacity: 0;*/
       -webkit-transform: translateY(70%);
     } 
     100% {
@@ -321,26 +308,15 @@
       text-align: center;
       margin: 25px 0;
     }
-    .btn-lg {
-        /*width: 100%;*/
-        /*margin-bottom: 35px;*/
-    }
   }
   
 
-
-
-
-
-.wrapper {  
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
+  /*login register wedding.html*/
 
 form {
-  background-color: darkgrey;
+  /*background-color: darkgrey;*/
   border-radius: 5%;
-  color: white;
+  color: #fff;
   border-style: none;
   align-content: center;
 }
@@ -366,7 +342,6 @@ form {
     height: auto;
     padding: 10px;
     @include box-sizing(border-box);
-
     &:focus {
       z-index: 2;
     }
@@ -386,72 +361,6 @@ form {
 }
 
 
-/* about section */
-.greenblock {
-  background-color: #09260c;
-  color: #F9D663;
-}
-
-
-#myCarousel2 h5 {
-  padding-bottom: 5%;
-
-}
-
-.topslide {
-  width: 378px;
-  height: 306px;
-  border-radius: 7%;
-}
-
-.leftpadding{
-  padding-left: 5%;
-}
-
-.band, .leftpadding h3, h4 {
-  color: white;
-}
-
-.band {
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  text-transform: capitalize;
-  padding-top: 0%;
-  color: #303030;
-  font-size: 1.2em; 
-  background-color: #09260c;
-}
-
-.band, .col-sm-3 {
-  padding-bottom: 1%;
-}
-
-.bottom {
-  align-self: flex-end;
-}
-
-
-
-.move {
-  border-style: none;
-  font-family: Optima sans-serif;
-  text-transform: lowercase;
-  font-style: oblique;
-  font-size: 1.5em;
-  background-color: #F9D663;
-  color: #09260c;
-  border-radius: 45%;
-  float: right;
-  width: 90px;
-  padding: 10px 10px;
-  margin-bottom: 5%;
-}
-
-.move, .glyphicon {
-  color: #BFBFBF;
-
-}
 
 
 .push {
@@ -459,62 +368,33 @@ form {
   float: right;
 }
 
-.pricescript {
-  font-family: Optima sans-serif;
-  font-style: oblique;
-  font-size: 1.5em;
-  word-spacing: 3px;
-
-}
-
-
-
-.smallscript {
-  font-family: Optima sans-serif;
-  font-style: oblique;
-  text-transform: lowercase;
-  font-size: .5em;
-  word-spacing: 3px;
-
-}
-
 
 
 
 /* styling for register and login pages*/
 
-
-
-
-
-
 .register_button{
-  -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    font-family: Optima sans-serif;
+  -webkit-transition-duration: 0.4s; 
+    /*transition-duration: 0.4s;*/
     text-transform: lowercase;
-    font-style: oblique;
-    letter-spacing: 3px;
-    background-color: white; 
+    background-color: #fff; 
     border: solid 2px #2b3b2f;
     color: #2b3b2f;
 }
 .register_button:hover {
-  background-color: #334738;/* Green */
-  color: white;
-
+  background-color: #334738;
+  color: #fff;
 }
 
 .form-signin {
-  background-color:    #405946; /* Green */
+  background-color: #405946; 
   border: solid 2px #334738;
   text-align: center;
   text-transform: lowercase;
   }
 
 .form-signin-heading{
-  font-family: Palatino Linotype, serif;
-  letter-spacing: 3px
+  text-transform: none;
   }
 
 input.form-control::-webkit-input-placeholder {
@@ -530,6 +410,10 @@ form a:hover {
   text-decoration: none;  
 }
 
-#contact {
-  background-image: 
-}
+
+/* footer style */
+footer {
+    color: #fff;
+    background-color:#334738;
+  }
+
