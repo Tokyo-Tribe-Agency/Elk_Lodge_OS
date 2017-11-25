@@ -108,7 +108,7 @@
     "pk": 1,
     "fields": {
       "photo_name": "fake photo",
-      "photo_url": "http://placehold.it/150x150",
+      "photo_url": "assets/OEKDCZ0.jpg",
       "photo_type": "good"
 
     }
@@ -118,7 +118,7 @@
     "pk": 2,
     "fields": {
       "photo_name": "fake photo",
-      "photo_url": "http://placehold.it/150x150",
+      "photo_url": "assets/OEKDCZ0.jpg",
       "photo_type": "good"
 
     }
@@ -128,7 +128,7 @@
     "pk": 3,
     "fields": {
       "photo_name": "fake photo",
-      "photo_url": "http://placehold.it/150x150",
+      "photo_url": "assets/OEKDCZ0.jpg",
       "photo_type": "good"
 
     }

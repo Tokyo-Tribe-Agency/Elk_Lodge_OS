@@ -1,4 +1,6 @@
+
 {% load staticfiles %}
+
 <div id="about" class="container-fluid">	
 		<div class="row text-center">
 			<h3>Who are the Franklin Elks?</h3>
@@ -15,7 +17,7 @@
       <div class="item active">
   		<div class="card">
 				<div class="card-block">
-			  		<img class="card-img-top d-block img-fluid cardSize" src="{{elk.elk_photo}}" alt="Card image cap">
+			  		<img class="card-img-top d-block img-fluid cardSize" src="{% static 'assets/OEKDCZ0.jpg' %}" alt="Card image cap">
 			  			<div class="card-block">
 			  				<div class="card-style">
 			  					
@@ -37,7 +39,7 @@
   				<div class="card">
 
 					<div class="card-block">
-			  		<img class="card-img-top d-block img-fluid cardSize" src=" {{elk.elk_photo}}"  alt="Card image cap">
+			  		<img class="card-img-top d-block img-fluid cardSize" src=" {% static 'assets/OEKDCZ0.jpg' %}"  alt="Card image cap">
 			  			<div class="card-block">
 			  				<div class="card-style">
 			    			<h3 class="card-title">{{elk.first_name}}</h3>

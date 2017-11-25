@@ -7,6 +7,7 @@
 // }
 
 
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -42,7 +43,6 @@
 
 
 $(".navbar button a, .sign").hover(function(){
-
   console.log("im a hover");
 })
 
