@@ -24,8 +24,9 @@
 			    			<h3 class="card-title">{{elk.first_name}}</h3>
 			    			<h4 class="card-title">{{elk.last_name}}</h4>
 			    			<ul>
-			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logot.svg' %}" alt="logo" /></li>
-			    				<li><img  class="img-fluid card-title card-style" src="{% static 'assets/logoL.svg' %}" alt="logo" /></li>
+			    				<li><a href="{{elk.linked_in_url}}" class="img-fluid card-title fa fa-linkedin-square" aria-hidden="true"></a></li>
+								<li><a href="{{elk.email_address}}" class="img-fluid card-title fa fa-envelope-o" aria-hidden="true"></a></li>
+
 
 			    			</ul>
 			  				</div>
@@ -45,8 +46,10 @@
 			    			<h3 class="card-title">{{elk.first_name}}</h3>
 			    			<h4 class="card-title">{{elk.last_name}}</h4>
 			    			<ul>
-			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logot.svg' %}" alt="logo" /></li>
-			    				<li><img class="img-fluid card-title card-style" src="{% static 'assets/logoL.svg' %}" alt="logo" /></li>
+			    				<li><a href="{{elk.linked_in_url}}" class="img-fluid card-title fa fa-linkedin-square" aria-hidden="true"></a></li>
+								<li><a href="{{elk.email_address}}" class="img-fluid card-title fa fa-envelope-o" aria-hidden="true"></a></li>
+
+
 
 			    			</ul>
 			  			</div>
