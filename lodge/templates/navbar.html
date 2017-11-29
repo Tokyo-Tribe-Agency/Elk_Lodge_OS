@@ -16,29 +16,40 @@
         {% if request.path == '/' %}
         <li><a href="{{'/login'}}">Login</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Events
-          </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" href="#">Action</a>
-            </div>
-        </li>
+        <!-- <li><a href="#events">Events</a></li> -->
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#events">Lodge Events</a></li>
+          <li><a href="{{'/wedding'}}">Weddings</a></li>
+          
+        </ul>
+      </li>
+
         <li><a href="#membership">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
+        </ul>
+           <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
         {% endif %}
 
         {% if request.path == '/register' %}
         <li><a href="{{'/'}}">Home</a></li>
         <li><a href="{{'/login'}}">Login</a></li>
+        </ul>
         {% endif %}
 
         {% if request.path == '/login' %}
         <li><a href="{{'/'}}">Home</a></li>
         {% endif %}
+
+        {% if request.path == '/wedding' %}
+        <li><a href="{{'/'}}">Home</a></li>
       </ul>
-      <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
+           <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
+        {% endif %}
+
+
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

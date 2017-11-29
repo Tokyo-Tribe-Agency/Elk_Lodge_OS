@@ -1,10 +1,11 @@
-function myMap() {
-  var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-  var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  var marker = new google.maps.Marker({position:myCenter});
-    marker.setMap(map);
-}
+// function myMap() {
+//   var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+//   var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+//   var map = new google.maps.Map(document.getElementById("contac"),mapProp);
+//   var marker = new google.maps.Marker({position:myCenter});
+//     marker.setMap(map);
+// }
+
 
 
   // Add smooth scrolling to all links in navbar + footer link
@@ -41,8 +42,14 @@ function myMap() {
   });
 
 
+$(".navbar button a, .sign").hover(function(){
+  console.log("im a hover");
+})
+
+
 $(function () {
-  console.log("ima tooltip");
-  $('[data-toggle="tooltip"]').tooltip()
+    $(".dropdown-toggle").dropdown();
+    console.log("ima tooltip");
+    $('[data-toggle="tooltip"]').tooltip()
 })
   

@@ -1,69 +1,21 @@
- 
 
-  h1 {
+  h1, h3, h4, .form-signin-heading, .parallax  {
     font-family: Palatino Linotype, serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-
-  }
-
-  h3 {
-    font-family: Palatino Linotype, serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
   }
 
   h4 {
-    /*color: #37474f;*/
     font-family: Montserrat, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
   }
 
   h5 {
     color: #BFBFBF;
-
   }
 
-  .card-style {
-    margin: auto;
-    width: 50%;
-    background-color: #37474f;
-    font-family: Montserrat, sans-serif; 
-    letter-spacing: 1px;
-    color: white !important;
-    width: 263px;
-    border-radius: 5%;
-    padding-bottom: .5%;
+/* handwritten font elements */
 
-
-  }
-
-  .cardSize {
-  width: 263px;
-  height: 329px;
-  border-top-right-radius: 5%;
-  border-top-left-radius: 5%;
-}
-
-.card-block ul li img {
-  width: 23.76px !important;
-  height: 23.76px !important;
-  padding-bottom: 1.5%;
-}
-.card-block ul li {
-
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-}
-  /*fonts*/
-
-  .handy {
+  .handscript, .handscript button, .navbar button, .register_button{
     font-family: Optima sans-serif;
     font-style: oblique;
     font-size: 1.5em;
@@ -71,156 +23,30 @@
     transition: background-color 0.5s ease;
   }
 
-  .handybutton {
-    font-family: Optima sans-serif;
-    font-style: oblique;
+  .handscript button {
     background-color: #fff9c4;
-    font-size: 1.5em;
-    word-spacing: 3px;
-    transition: background-color 0.5s ease;
   }
 
-   .handybutton:hover {
-    background-color: #334738; /* Green */
+  .handscript button:hover {
+    background-color: #334738; 
     color: #FFF;
-
   }
 
- .handy, h4{
+ .handscript > h4, .navbar button {
   color: #37474f;
   text-transform: lowercase;
-
 }
 
- .handy, .card-title{
+ .handscript > .card-title{
   color: #37474f;
   text-transform: lowercase;
-
 }
 
-  .slideBox {
-    height: 500px;
-    width: auto;
-  }
-
-  .padding {
-    padding-top: 100px;
-  }
-
-  .jumbotron1 {
-
-    /*height: 100%;*/
-    background-color: #EDF0F2;
-    background: url(assets/header.svg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
-      color:  #303030;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-
-
-
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  
-  
- /*carousel styles*/
-
-.carousel-control.right, .carousel-control.left {
-  background-image: none !important;
+.smallscript {
+  font-size: .5em;
 }
 
-.carousel-indicators 
-.active {
-  background-color: transparent !important;
-  color: transparent !important;
-  border-style: solid white;
-}
-
-.carousel-indicators li {
-  opacity: .7;
-  background-color: white !important;
-  color: white !important;
-  border: solid white 1px;
-}
-
-.carousel-control.right, .carousel-control.left, .glyphicon-chevron a span {
-  background-color: transparent !important;
-  color: #383838 !important;
-}
-
-.card-img-top, .d-block, .img-fluid {
-  /*width: 150px;*/
-  /*height: auto;*/
-}
-
-
-
-
-/*pricing section*/
-
-  .panel {
-      /*border: 1px solid #f4511e; */
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-      height: 100% !important;
-      position: relative;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      /*border: 1px solid #303030;*/
-      background-color: #fff !important;
-      color: #303030;
-  }
-  .panel-heading {
-      color: lightblue !important;
-      /*background-color: #303030 !important;*/
-      padding: 25px;
-      border-bottom: 2px solid lightblue;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-
-  }
-  .panel-footer {
-      background-color: white !important;
-      position: absolute;
-      align-content: center;
-      margin: auto;
-      padding-left: 35%;
-      bottom: 0;
-      border-top: transparent;
-
-  }
-  .panel-body {
-    border-bottom: 1px solid #ddd;  
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      /*margin: 15px 0;*/
-      background-color: #303030;
-      color: #fff;
-  }
-  .panel-sizing {
-    height: 500px;
-  }
-
-
-
-/*navigation styles*/
+  /*navigation styles --navbar.html*/
 
 
   .navbar {
@@ -240,56 +66,228 @@
       color: #09260c !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: white !important;
+      color: #fff !important;
       background-color: #09260c; !important;
   }
   .navbar-default .navbar-toggle {
       border-color: transparent;
       color: #fff !important;
   }
+
+
   .navbar button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    font-family: Optima sans-serif;
-    /*text-transform: lowercase;*/
-    font-style: oblique;
     letter-spacing: 3px;
-    background-color: transparent; 
     border: solid 2px #09260c;
     float: right;
-    
+    color: #334738 !important;   
 }
 
 .navbar button:hover {
-    background-color: #334738; /* Green */
-    color: #FFF;
+    border-color:  #56765e; 
+    box-shadow: 1px 1px;
 }
+
 
 .navbar button a {
-  color: #334738;
-  
-}
-.navbar button a:hover {
-  color: white;
   text-decoration: none;
+  color: #334738 !important;   
 }
 
-  footer {
-    color: #fff;
-    background-color:#334738;
+/*jumbotron elk svg styling --jumbotron.html*/
+.band, .leftpadding h3, h4 {
+  color: #fff;
+}
+  .leftpadding{
+    padding-left: 5%;
   }
 
-/* footer style */
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
+/*
+button.handscript.text-center {
+
+}
+*/
+button.handscript.text-center:hover {
+  color: #fff;
+  background-color: #334738;
+
+}
+
+  .padding {
+    padding-top: 100px;
   }
 
+  .jumbotron1 {
+    background-color: #EDF0F2;
+    background: url(assets/header.svg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    color:  #303030;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
 
-
-
+  .container-fluid {
+      padding: 60px 50px;
+  }
   
+
+.band {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  text-transform: capitalize;
+  padding-top: 0%;
+  color: #303030;
+  font-size: 1.2em; 
+  background-color: #09260c;
+}
+
+.band, .col-sm-3 {
+  padding-bottom: 1%;
+}
+
+/*slideshow styling - cards --about.html, events.html*/
+  
+  .slideBox {
+    height: 500px;
+    width: auto;
+  }
+
+  #events :nth-child(2){
+    color: #303030;
+  }
+
+  #events > #carousel > .carousel-inner > .item >.card > .card-block > h4 {
+    color: #303030;
+    padding-top: 5%;
+  } 
+
+  .card-style {
+    z-index: 100;
+    margin: auto;
+    width: 100%;
+    background-color: #37474f;
+    font-family: Montserrat, sans-serif; 
+    letter-spacing: 1px;
+    color: white !important;
+    width: 263px;
+    padding-bottom: .5%;
+  }
+
+  .cardSize {
+  width: 263px;
+  height: 329px;
+}
+
+.card-block ul li img {
+  width: 23.76px !important;
+  height: 23.76px !important;
+  padding-bottom: 1.5%;
+}
+
+.card-block ul li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+/*about.html*/
+#myCarousel2 h5 {
+  padding-bottom: 5%;
+
+}
+.greenblock {
+  background-color: #09260c;
+  color: #F9D663;
+}
+.topslide {
+  width: 378px;
+  height: 306px;
+  border-radius: 7%;
+}
+
+
+
+/*slideshow styling - carousel --about.html, events.html */
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none !important;
+}
+
+.carousel-indicators 
+.active {
+  background-color: transparent !important;
+  color: transparent !important;
+  border-style: solid white;
+}
+
+.carousel-indicators li {
+  opacity: .7;
+  background-color: #fff !important;
+  color: white !important;
+  border: solid #fff 1px;
+}
+
+.carousel-control.right, .carousel-control.left, .glyphicon-chevron a span {
+  background-color: transparent !important;
+  color: #383838 !important;
+}
+
+.wrapper {  
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Membership pricing panels section --- prices.html*/
+
+  .panel {
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+      height: 100% !important;
+      position: relative;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      background-color: #616060!important;
+      color: #fff;
+      box-shadow: inset 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-heading {
+      color: lightblue !important;
+      padding: 25px;
+      border-bottom: 2px solid lightblue;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: #fff !important;
+      position: absolute;
+      align-content: center;
+      margin: auto;
+      padding-left: 35%;
+      bottom: 0;
+      border-top: transparent;
+  }
+  .panel-body {
+    border-bottom: 1px solid #ddd;  
+  }
+  
+  .panel-footer .btn {
+      background-color: #303030;
+      color: #fff;
+  }
+  .panel-sizing {
+    height: 500px;
+  }
+
   /*.slideanim {visibility:hidden;}*/
   .slide {
       animation-name: slide;
@@ -310,7 +308,6 @@
   }
   @-webkit-keyframes slide {
     0% {
-      /*opacity: 0;*/
       -webkit-transform: translateY(70%);
     } 
     100% {
@@ -323,26 +320,13 @@
       text-align: center;
       margin: 25px 0;
     }
-    .btn-lg {
-        /*width: 100%;*/
-        /*margin-bottom: 35px;*/
-    }
   }
   
 
-
-
-
-
-.wrapper {  
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
+  /*login register wedding.html*/
 
 form {
-  background-color: darkgrey;
-  border-radius: 5%;
-  color: white;
+  color: #fff;
   border-style: none;
   align-content: center;
 }
@@ -368,7 +352,6 @@ form {
     height: auto;
     padding: 10px;
     @include box-sizing(border-box);
-
     &:focus {
       z-index: 2;
     }
@@ -387,97 +370,9 @@ form {
   }
 }
 
-
-/* about section */
-.greenblock {
-  background-color: #09260c;
-  color: #F9D663;
-}
-
-
-#myCarousel2 h5 {
-  padding-bottom: 5%;
-
-}
-
-.topslide {
-  width: 378px;
-  height: 306px;
-  border-radius: 7%;
-}
-
-.leftpadding{
-  padding-left: 5%;
-}
-
-.band, .leftpadding h3, h4 {
-  color: white;
-}
-
-.band {
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  text-transform: capitalize;
-  padding-top: 0%;
-  color: #303030;
-  font-size: 1.2em; 
-  background-color: #09260c;
-}
-
-.band, .col-sm-3 {
-  padding-bottom: 1%;
-}
-
-.bottom {
-  align-self: flex-end;
-}
-
-
-
-.move {
-  border-style: none;
-  font-family: Optima sans-serif;
-  text-transform: lowercase;
-  font-style: oblique;
-  font-size: 1.5em;
-  background-color: #F9D663;
-  color: #09260c;
-  border-radius: 45%;
-  float: right;
-  width: 90px;
-  padding: 10px 10px;
-  margin-bottom: 5%;
-}
-
-.move, .glyphicon {
-  color: #BFBFBF;
-
-}
-
-
 .push {
   padding-right: 5%;
   float: right;
-}
-
-.pricescript {
-  font-family: Optima sans-serif;
-  font-style: oblique;
-  font-size: 1.5em;
-  word-spacing: 3px;
-
-}
-
-
-
-.smallscript {
-  font-family: Optima sans-serif;
-  font-style: oblique;
-  text-transform: lowercase;
-  font-size: .5em;
-  word-spacing: 3px;
-
 }
 
 
@@ -485,38 +380,28 @@ form {
 
 /* styling for register and login pages*/
 
-
-
-
-
-
 .register_button{
-  -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    font-family: Optima sans-serif;
+  -webkit-transition-duration: 0.4s; 
+    /*transition-duration: 0.4s;*/
     text-transform: lowercase;
-    font-style: oblique;
-    letter-spacing: 3px;
-    background-color: white; 
+    background-color: #fff; 
     border: solid 2px #2b3b2f;
     color: #2b3b2f;
 }
 .register_button:hover {
-  background-color: #334738;/* Green */
-  color: white;
-
+  background-color: #334738;
+  color: #fff;
 }
 
 .form-signin {
-  background-color:    #405946; /* Green */
+  background-color: #405946; 
   border: solid 2px #334738;
   text-align: center;
   text-transform: lowercase;
   }
 
 .form-signin-heading{
-  font-family: Palatino Linotype, serif;
-  letter-spacing: 3px
+  text-transform: none;
   }
 
 input.form-control::-webkit-input-placeholder {
@@ -532,4 +417,112 @@ form a:hover {
   text-decoration: none;  
 }
 
+
+
+/*parallax and styles for wedding.html*/
+
+
+
+.parallax_0, .parallax_1, .parallax_2 {
+    text-align: center;
+    opacity: .5;
+    height: 50%; 
+    min-height: 300px;
+    border: double 6px #5F8569;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_0{
+
+    background-image: url(assets/pexels-photo-540522.jpeg);
+}
+.parallax_1{
+    background-image: url(assets/fashion-men-vintage-colorful.jpg);
+}
+.parallax_2{
+    background-image: url(assets/pexels-photo-566454.jpeg);
+}
+
+
+
+.parallax {
+  padding-top: 10%;
+  text-align: center;
+  text-transform: lowercase; 
+  font-size: 1em !important;
+  overflow: hidden;
+  height: 200px;
+  background-color: #fff;
+}
+
+
+.parallax-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  padding-top: 10%;
+}
+
+.parallax-header-0,.parallax-header-1, .parallax-header-2 {
+  color: #5F8569;
+  text-transform: lowercase;
+  font-size: 3em !important;
+  border: solid 3px #5F8569;
+  z-index: 500;
+  top: 50%;
+  min-width: 30%; 
+  margin: 0 auto;
+  padding: 2.5%;
+}
+
+.parallax-header-1 {
+  z-index: 900;
+  top: 130%;
+}
+.parallax-header-2 {
+  z-index: 900
+  top: 230%;
+}
+
+
+
+/* Style all font awesome icons */
+div.card-style > ul {
+  padding-left: inherit !important;
+}
+
+.fa {
+  padding: 2.5%;
+  font-size: 1.5em;
+  width: 15%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin-square {
+    background: #3B5998;
+    color: white;
+}
+
+/* email */
+
+.fa-envelope-o{
+    background: #55ACEE;
+    color: white;
+}
+
+/* footer style */
+footer {
+    color: #fff;
+    background-color:#334738;
+  }
 
