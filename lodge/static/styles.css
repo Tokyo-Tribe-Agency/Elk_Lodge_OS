@@ -437,6 +437,7 @@ form a:hover {
 }
 
 .parallax_0{
+
     background-image: url(assets/pexels-photo-540522.jpeg);
 }
 .parallax_1{
@@ -502,8 +503,6 @@ div.card-style > ul {
   text-align: center;
   text-decoration: none;
 }
-
-/* Add a hover effect if you want */
 
 .fa:hover {
     opacity: 0.7;
