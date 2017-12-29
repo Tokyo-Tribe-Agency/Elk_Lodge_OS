@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>BraintreeFlaskExample</title>
-  {%include "styles.html"%}
+  {%include "scripts/styles.html"%}
 </head>
 <body>
   <header class="main">
@@ -32,7 +32,6 @@
 
 
   {% block content %}{% endblock %}
-  <script type="text/javascript" src="{% static 'js/demo.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/javascripts.js' %}"></script>
-  </body>
+  {%include "scripts/js.html"%}
+ </body>
 </html>
