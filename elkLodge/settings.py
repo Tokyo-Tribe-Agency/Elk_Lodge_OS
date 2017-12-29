@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+BRAINTREE_MERCHANT_ID = '<dwnqbjvjdjc8ysjp>'
+BRAINTREE_PUBLIC_KEY = '<kgzvv6qhfzq6dq5y>'
+BRAINTREE_PRIVATE_KEY = '<4e0b90ddfad27f835c658a2f76850504>'
+
 
 # Application definition
 
@@ -99,6 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
 
 
 # Internationalization

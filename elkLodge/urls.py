@@ -23,7 +23,13 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login$', login, name='login'),
     url(r'^register$', register, name='register'),
-    url(r'^wedding$', wedding, name='wedding')
+    url(r'^wedding$', wedding, name='wedding'),
+    url(r'^new_checkout$', new_checkout, name='new_checkout'),
+    url(r'^show_checkout/(?P<transaction_id>.+?)$', show_checkout, name='show_checkout'),
+    url(r'^create_checkout$', create_checkout, name='create_checkout'),
+
+    # url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', filter_blog_by_topic, name='filter_blog_by_topic'),
+
     # url(r'^about$', about, name='about'),
     # url(r'^events$', events, name='events'),
     # url(r'^recent_events$', recent_events, name='recent_events')
