@@ -381,6 +381,9 @@ form {
 /* styling for register and login pages*/
 
 .register_button{
+   display: block;
+  margin-left: auto;
+    margin-right: auto;
   -webkit-transition-duration: 0.4s; 
     /*transition-duration: 0.4s;*/
     text-transform: lowercase;

@@ -26,6 +26,7 @@
           
         </ul>
       </li>
+        <li><a href="{{'/newsletter'}}">Newsletter</a></li>
 
         <li><a href="#membership">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -40,6 +41,10 @@
         {% endif %}
 
         {% if request.path == '/login' %}
+        <li><a href="{{'/'}}">Home</a></li>
+        {% endif %}
+
+        {% if request.path == '/newsletter' %}
         <li><a href="{{'/'}}">Home</a></li>
         {% endif %}
 

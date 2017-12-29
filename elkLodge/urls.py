@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^login$', login, name='login'),
     url(r'^register$', register, name='register'),
     url(r'^wedding$', wedding, name='wedding'),
+    url(r'^newsletter$', newsletter, name='newsletter'),
     url(r'^new_checkout$', new_checkout, name='new_checkout'),
     url(r'^show_checkout/(?P<transaction_id>.+?)$', show_checkout, name='show_checkout'),
     url(r'^create_checkout$', create_checkout, name='create_checkout'),

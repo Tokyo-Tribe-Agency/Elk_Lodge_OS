@@ -40,15 +40,19 @@ def index(request):
 	return render(request, template_name, {'members': all_members, 'events': all_events, 'today': today_filter})
 
 def login(request):
-	template_name = 'login.html'
+	template_name = 'user/login.html'
 	return render(request, template_name, {})
 
 def wedding(request):
-	template_name = 'weddings.html'
+	template_name = 'wedding/weddings.html'
 	return render(request, template_name, {})
 
+def newsletter(request):
+    template_name = 'user/newsletter.html'
+    return render(request, template_name, {})
+
 def register(request):
-	template_name = 'register.html'
+	template_name = 'user/register.html'
 	print("request", request.path)
 	return render(request, template_name, {})
 

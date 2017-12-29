@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "scripts/styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	<div class="container">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm">
+				    <form class="form-signin"> 
+				    	<h2 class="form-signin-heading">Please login</h2>
+				      	<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+				      	<br>
+				      	<input type="Password" class="form-control" name="password" placeholder="Password" required=""/> 
+				      	<br>     
+		    			<h5><a>Forgot your password?</br>Click here</a></h5>
+		    			<div class="row">
+				      	<div class="col-sm push">     
+						   <button class="btn btn-lg btn-block register_button signin" type="submit"> signin</button>   
+						</div>
+					</div>
+				    </form>
+				</div>
+				<div class="col-sm"></div>
+			</div>
+  		</div>
+  	</div>
+	{% include "footer.html"%}
+	{%include "scripts/js.html"%}	
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{% static 'javascript.js' %}"></script> -->
+</body>
+</html> 
+
+

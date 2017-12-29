@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>ElkLodge</title>
-	{%include "styles.html"%}
+	{%include "scripts/styles.html"%}
 </head>
 <body>
 	{%include "navbar.html"%}
@@ -21,7 +21,6 @@
 			<div class="parallax container">
 				Donut bear claw chocolate sugar plum. Jelly-o jelly-o dessert brownie soufflé cookie marzipan caramels. Cheesecake sugar plum marzipan. Cupcake toffee dessert chocolate bar soufflé.
 			</div>
-
 			<div class="parallax_1">
 				<div class="parallax-container">
 					<section class="text-center parallax-header-1 handscript">
@@ -32,7 +31,6 @@
 			<div class="parallax container">
 				Donut bear claw chocolate sugar plum. Jelly-o jelly-o dessert brownie soufflé cookie marzipan caramels. Cheesecake sugar plum marzipan. Cupcake toffee dessert chocolate bar soufflé.
 			</div>
-
 			<div class="parallax_2">
 				<div class="parallax-container">
 					<section class="text-center parallax-header-2 handscript">
@@ -43,34 +41,25 @@
 			<div class="parallax container">
 				Donut bear claw chocolate sugar plum. Jelly-o jelly-o dessert brownie soufflé cookie marzipan caramels. Cheesecake sugar plum marzipan. Cupcake toffee dessert chocolate bar soufflé.
 			</div>
-
 			    <form class="form-signin">       
-			      <h2 class="form-signin-heading">Please Wedding</h2>
+			    	<h2 class="form-signin-heading">Please Wedding</h2>
 			      	<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
 			      	<br>
 			      	<input type="Password" class="form-control" name="password" placeholder="Password" required=""/> 
 			      	<br>     
 	    			<h5>
-	    				<a>Forgot your Wedding?</br>
-	    				Click here</a>
+	    				<a>Forgot your Wedding?</br>Click here</a>
 	    			</h5>
 	    			<div class="row">
-			      	<div class="col-sm push">     
-					   <button class="btn btn-lg btn-block register_button signin" type="submit"> wed </button>   
+			      		<div class="col-sm push">     
+					   		<button class="btn btn-lg btn-block register_button signin" type="submit"> wed </button>   
+						</div>
 					</div>
-				</div>
 			    </form>
 	<div class="padding"></div>
-
+</div>
 	{% include "footer.html"%}
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="{% static 'javascript.js' %}"></script>
+	{%include "scripts/js.html"%}
 </body>
 </html> 
 
