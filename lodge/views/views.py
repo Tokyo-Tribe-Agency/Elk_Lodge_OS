@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.shortcuts import redirect
 import operator
 from datetime import date
 from django import forms
@@ -34,11 +35,8 @@ def index(request):
 	template_name = 'index.html'
 	all_members = Elks.objects.all() 
 	all_events = Events.objects.all()
-	print("request", request.path)	
 	today = date.today()
 	today_filter =  Events.objects.filter(event_date__year=today.year)
-	for events in today_filter:
-		print("name", events.event_name)
 	return render(request, template_name, {'members': all_members, 'events': all_events, 'today': today_filter})
 
 def login(request):
@@ -80,11 +78,10 @@ def show_checkout(request, transaction_id):
 
 def create_checkout(request):
 	form = request.POST
-	data = 
-	
+	data = form.dict()
 	result = braintree.Transaction.sale({
-	'amount': request.form.cleaned_data['amount'],
-	'payment_method_nonce': request.form.cleaned_data['payment_method_nonce'],
+	'amount': data['amount'],
+	'payment_method_nonce': data['payment_method_nonce'],
 	'options': {
 	"submit_for_settlement": True
 	}
@@ -95,17 +92,4 @@ def create_checkout(request):
 		for x in result.errors.deep_errors: flash('Error: %s: %s' % (x.code, x.message))
 		return redirect('new_checkout')
 
-
-
-# def about(request):
-# 	template_name = 'about.html'
-# 	return render(request, template_name, {'members' : all_members})
-
-# def events(request):
-# 	template_name = 'events.html' 
-# 	return render(request, template_name, {'events' : all_events})
-
-# def recent_events(request):
-# 	template_name = 'slide.html'
-# 	return render(request, template_name, {'events': today_filter})
 
