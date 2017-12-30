@@ -28,7 +28,11 @@ urlpatterns = [
     url(r'^new_checkout$', new_checkout, name='new_checkout'),
     url(r'^show_checkout/(?P<transaction_id>.+?)$', show_checkout, name='show_checkout'),
     url(r'^create_checkout$', create_checkout, name='create_checkout'),
-
+    url(r'^archive$', archive, name='archive'),
+    url(r'^search_keyword/$', search_keywords, name='search_keywords'),
+    url(r'^popular$', popular, name='popular'),
+    url(r'^recent_events$', recent_events, name='recent_events'),
+    url(r'^post/(?P<blog_id>.+?)$', get_this_post, name='get_this_post'),
     # url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', filter_blog_by_topic, name='filter_blog_by_topic'),
 
     # url(r'^about$', about, name='about'),

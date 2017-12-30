@@ -1,0 +1,38 @@
+{{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "scripts/styles.html"%}
+</head>
+<body>
+{%include "navbar.html"%}
+<div class="padding"></div>
+	<h3 class="text-center">Events at the Elk Lodge</h3>
+<div class="container">
+	{%include "events/sidenav.html"%}
+	<div class="row">
+		<div class="col-sm-12 panel-sizing">
+				<div class="panel panel-default text-center">
+				<div class="panel-heading">
+  					<h1>{{event.event_name}}<subtitle class="smallscript">annually</subtitle></h1>
+  					<h5 class="handscript">Standard</h5>
+				</div>
+				<div class="panel-body">
+		          <p>{{event.event_description}}</p>
+		          <p>{{event.event_date}}</p>
+		          <p>{{event.event_location}}</p>
+		          <p>{{event.event_description}}</p>
+		          <p>{{event.event_time}}</p>
+		          <p>{{event.event_amount}}</p>
+				</div>
+		        <div class="panel-footer">
+				</div>
+				</div>      
+		</div>     
+	</div>
+</div>
+	{%include "scripts.html"%}
+</body>
+</html>

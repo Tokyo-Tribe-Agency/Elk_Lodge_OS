@@ -1,0 +1,10 @@
+<span id="open" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span>
+	<div id="mySidenav" class="sidenav">
+	  <a id="close" href="#"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+	   <form  action="{% url 'search_keywords' %}" type="get" accept-charset="utf-8" class="navbar-form search">
+              <span id="searchIcon" class="glyphicon glyphicon-search" ></span>
+                <input id="search_input" value="{{request.GET.search}}" type="text" class="form-control" name="Search" placeholder="Search"> 
+        </form> 
+	  <a href="{% url 'archive' %}">archive</a>
+	  <a href="{% url 'popular' %}">popular</a>
+	</div>

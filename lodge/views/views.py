@@ -97,3 +97,32 @@ def create_checkout(request):
 		return redirect('new_checkout')
 
 
+def archive(request):
+    template_name = 'events/allevents.html' 
+    blogs = Events.objects.order_by('event_date')
+    return render(request, template_name, {'events': events})
+
+
+def search_keywords(request):
+    form_data = request.GET
+    iterable_form_data = form_data.dict()
+    search_box = iterable_form_data['Search']
+    template_name = 'events/allevents.html'
+    posts_head = Events.objects.filter(content__text__contains=search_box)
+    if posts_head.exists():
+        print(posts_head)
+        return render(request, template_name, {'blogs': posts_head, 'search_box': search_box})
+    else: 
+        template_name = '404.html'
+        return render(request, template_name)
+
+def popular(request):
+    events = Events.objects.order_by('post_like')
+    template_name = 'events/allevents.html'
+    return render(request, template_name, {'events': events})    
+
+def recent_events(request):
+    events = Events.objects.order_by('event_date')[:5]
+    template_name = 'events/allevents.html'
+    return render(request, template_name, {'events': events})    
+
