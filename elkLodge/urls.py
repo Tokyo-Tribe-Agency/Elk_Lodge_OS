@@ -30,9 +30,9 @@ urlpatterns = [
     url(r'^create_checkout$', create_checkout, name='create_checkout'),
     url(r'^archive$', archive, name='archive'),
     url(r'^search_keyword/$', search_keywords, name='search_keywords'),
-    url(r'^popular$', popular, name='popular'),
+    url(r'^event_amount$', filter_by_amount, name='filter_by_amount'),
     url(r'^recent_events$', recent_events, name='recent_events'),
-    url(r'^post/(?P<blog_id>.+?)$', get_this_post, name='get_this_post'),
+    url(r'^event/(?P<event_id>.+?)$', get_this_event, name='get_this_event')
     # url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', filter_blog_by_topic, name='filter_blog_by_topic'),
 
     # url(r'^about$', about, name='about'),

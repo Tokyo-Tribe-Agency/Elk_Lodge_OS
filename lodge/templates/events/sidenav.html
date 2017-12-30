@@ -1,4 +1,9 @@
-<span id="open" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span>
+  <li class="nav-item">
+     <a class="nav-link active" href="#">
+		<i id="open" class="fas fa-align-justify fa-lg"></i>
+     	Event Filters
+    </a>
+  </li>
 	<div id="mySidenav" class="sidenav">
 	  <a id="close" href="#"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
 	   <form  action="{% url 'search_keywords' %}" type="get" accept-charset="utf-8" class="navbar-form search">
@@ -6,5 +11,8 @@
                 <input id="search_input" value="{{request.GET.search}}" type="text" class="form-control" name="Search" placeholder="Search"> 
         </form> 
 	  <a href="{% url 'archive' %}">archive</a>
-	  <a href="{% url 'popular' %}">popular</a>
+	  <a href="{% url 'filter_by_amount' %}">Filter events by Amount</a>
 	</div>
+
+	
+

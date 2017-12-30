@@ -13,49 +13,31 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar">
-        {% if request.path == '/' %}
-        <li><a href="{{'/login'}}">Login</a></li>
-        <li><a href="#about">About</a></li>
-        <!-- <li><a href="#events">Events</a></li> -->
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#events">Lodge Events</a></li>
-          <li><a href="{{'/wedding'}}">Weddings</a></li>
-          
-        </ul>
-      </li>
-        <li><a href="{{'/newsletter'}}">Newsletter</a></li>
+        {% if request.path != '/' %}
 
+        <li><a href="{{'/'}}">Home</a></li>
+        {%include "events/sidenav.html"%}
+        </ul>
+        {% endif %}
+
+        {% if request.path == '/' %}
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{'/archive'}}">Event Archive</a></li>
+          <li><a href="#events">Recent Lodge Events</a></li>
+          <li><a href="{{'/wedding'}}">Weddings</a></li>
+        </ul>
+        </li>
+        <li><a href="{{'/newsletter'}}">Newsletter</a></li>
         <li><a href="#membership">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
         </ul>
-           <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
-        {% endif %}
-
-        {% if request.path == '/register' %}
-        <li><a href="{{'/'}}">Home</a></li>
-        <li><a href="{{'/login'}}">Login</a></li>
-        </ul>
-        {% endif %}
-
-        {% if request.path == '/login' %}
-        <li><a href="{{'/'}}">Home</a></li>
-        {% endif %}
-
-        {% if request.path == '/newsletter' %}
-        <li><a href="{{'/'}}">Home</a></li>
-        {% endif %}
-
-        {% if request.path == '/wedding' %}
-        <li><a href="{{'/'}}">Home</a></li>
-      </ul>
-           <button class="btn btn-lg"> <a href="{{'/register'}}">SignUp</a></button>
         {% endif %}
 
 
-      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
