@@ -189,11 +189,4 @@ def add_inquiry(request):
 
 
 
-def download_pdf(request):
-    filename = '/static/assets/'
-    content = FileWrapper(filename)
-    response = HttpResponse(content, content_type='application/pdf')
-    response['Content-Length'] = os.path.getsize(filename)
-    response['Content-Disposition'] = 'attachment; filename=%s' % 'whatever_name_will_appear_in_download.pdf'
-    return response
     

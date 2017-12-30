@@ -36,7 +36,6 @@ urlpatterns = [
     url(r'^add_inquiry$', add_inquiry, name='add_inquiry'),
     url(r'^success$', success, name='success'),
     url(r'^error$', error, name='error'),
-    url('download_my_pdf', download_pdf),
     url(r'^application$', application, name='application')
 
     # url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', filter_blog_by_topic, name='filter_blog_by_topic'),
