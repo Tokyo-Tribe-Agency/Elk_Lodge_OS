@@ -6,10 +6,15 @@ from django.shortcuts import redirect
 import operator
 from datetime import date
 from django import forms
+from lodge.forms.forms import *
 from django.db.models import Q
 from lodge.models.models import *
 from django.conf import settings
 import braintree
+from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import mail_admins
+from wsgiref.util import FileWrapper
+
 
 
 
@@ -51,10 +56,24 @@ def newsletter(request):
     template_name = 'user/newsletter.html'
     return render(request, template_name, {})
 
+def application(request):
+    template_name = 'user/application.html'
+    return render(request, template_name, {})
+
 def register(request):
 	template_name = 'user/register.html'
 	print("request", request.path)
 	return render(request, template_name, {})
+
+def success(request):
+    template_name = 'user/success.html'
+    # print("request", request.path)
+    return render(request, template_name, {})
+
+def error(request):
+    template_name = 'user/error.html'
+    # print("request", request.path)
+    return render(request, template_name, {})
 
 def new_checkout(request):
     client_token = braintree.ClientToken.generate()
@@ -130,3 +149,51 @@ def get_this_event(request, event_id):
     event = Events.objects.get(pk= event_id)
     return render(request, template_name, {'event': event})
 
+def add_inquiry(request):
+    if request.method == 'GET':
+        template_name = 'user/inquiry.html'
+        inquiry_form = InquiryForm()
+        return render(request, template_name, {'inquiry_form': inquiry_form})
+
+    elif request.method == 'POST':
+        form_data = request.POST
+        inquiry_form = InquiryForm()
+
+        
+        i = Inquiry(
+            inquirer_first_name = form_data['inquirer_first_name'],
+            inquirer_last_name = form_data['inquirer_last_name'],
+            inquiry_title  = form_data['inquiry_title'],
+            inquiry_content = form_data['inquiry_content'],
+            inquiry_email_address = form_data['inquiry_email_address'],
+        ) 
+
+        i.save()
+        
+        botcheck = 'yes'
+        subject = "Elk Lodge Inquiry"
+        message = "This is a confirmation of your recent inquiry to the Elk Lodge"
+        from_email = "imfake@email.com"
+        recipient = form_data['inquiry_email_address']
+        recipient_list = [recipient]
+        if subject and message and recipient_list and botcheck == 'yes':
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                mail_admins(subject, message, fail_silently=False, connection=None, html_message=None)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect('/success')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
+            return HttpResponseRedirect('/error')
+
+
+
+def download_pdf(request):
+    filename = '/static/assets/'
+    content = FileWrapper(filename)
+    response = HttpResponse(content, content_type='application/pdf')
+    response['Content-Length'] = os.path.getsize(filename)
+    response['Content-Disposition'] = 'attachment; filename=%s' % 'whatever_name_will_appear_in_download.pdf'
+    return response
+    

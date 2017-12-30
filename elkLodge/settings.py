@@ -31,6 +31,16 @@ BRAINTREE_MERCHANT_ID = '<dwnqbjvjdjc8ysjp>'
 BRAINTREE_PUBLIC_KEY = '<kgzvv6qhfzq6dq5y>'
 BRAINTREE_PRIVATE_KEY = '<4e0b90ddfad27f835c658a2f76850504>'
 
+# Admins 
+# ADMINS = [('Angela', 'leead4@gmail.com')]
+# EMAIL_SUBJECT_PREFIX =  '[Django] '
+# SERVER_EMAIL = 'root@localhost'
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'tmp/email_messages/'
 
 # Application definition
 

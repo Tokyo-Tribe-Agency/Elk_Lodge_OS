@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "scripts/styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	<div class="padding"></div>
+	<h3 class="text-center">Subscribe to the Elk Lodge Newsletter</h3>
+  	<div class="container">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm">
+				    <form class="form-signin" method="post" action="{% url 'add_inquiry' %}">
+				    	{{inquiry_form.as_p}}
+				    	{% csrf_token %}
+<!-- 				    	<h2 class="form-signin-heading">Please Enter your contact information</h2>
+				      	<input type="text" class="form-control" name="email" placeholder="Email" required="" autofocus=""  data-toggle="tooltip" title="please use this email for your login"/>
+				      	<br>
+				      	<input type="First Name" class="form-control" name="first name" placeholder="First Name" required=""  data-toggle="tooltip" title="use this username to login"/>
+				      	<br>
+				      	<input type="Last Name" class="form-control" name="last name" placeholder="Last Name" required=""  data-toggle="tooltip" title="use this username to login"/>
+				      	<br>
+				      	<input type="radio" name="New Subscriber" value="subscriber">click here if you're a new subscriber
+				      	<br>
+				      	<br>
+				      	<div class="botcheck">
+          					<label class="label">You must answer <u>YES</u> to the question below to<br /> approve sending this email.  <span class="required">*</span></label>
+              				Do you want to send me an email? <input name="botcheck" class="inputtext" type="text" maxlength="5" size="5" />
+              			</div> -->
+				      	<div class="row">
+					      	<div class="col-sm push">     
+							   <button class="btn btn-lg btn-block register_button signin align-center" type="submit">Subcribe</button>   
+							</div>
+						</div> 
+				    </form>
+				</div>
+				<div class="col-sm"></div>
+			</div>
+  		</div>
+	</div>
+	{% include "footer.html"%}
+	{% include "scripts/js.html"%}
+</body>
+</html> 
+
+
+
+
+
+
+
+<div class="botcheck">
+          <label class="label">You must answer <u>YES</u> to the question below to<br /> approve sending this email.  <span class="required">*</span></label>
+              Do you want to send me an email? <input name="botcheck" class="inputtext" type="text" maxlength="5" size="5" />
+        <div class="message">
+          <label class="label">Message  <span class="required">*</span></label>
+          <textarea name="message" class="inputtextarea" rows="11" cols="45"></textarea>
+        </div>
