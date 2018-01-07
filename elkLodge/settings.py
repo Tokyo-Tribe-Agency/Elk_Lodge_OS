@@ -25,6 +25,8 @@ SECRET_KEY = 'l8)k4h=nk5uvkq2n%m9u=#&r@a+p((d^^tsz%5jw0xa-nh&68t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Ld4YT8UAAAAAJ9Hfcx5ereBln99FtMs1LH9fkS9'
+
 ALLOWED_HOSTS = []
 
 BRAINTREE_MERCHANT_ID = '<dwnqbjvjdjc8ysjp>'

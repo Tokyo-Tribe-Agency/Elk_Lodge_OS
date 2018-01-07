@@ -7,3 +7,4 @@ bin
 obj
 *.sqlite3
 */migrations/
+*.settings.py

@@ -18,20 +18,11 @@
 				    <form class="form-signin" method="post" action="{% url 'add_inquiry' %}">
 				    	{{inquiry_form.as_p}}
 				    	{% csrf_token %}
-<!-- 				    	<h2 class="form-signin-heading">Please Enter your contact information</h2>
-				      	<input type="text" class="form-control" name="email" placeholder="Email" required="" autofocus=""  data-toggle="tooltip" title="please use this email for your login"/>
-				      	<br>
-				      	<input type="First Name" class="form-control" name="first name" placeholder="First Name" required=""  data-toggle="tooltip" title="use this username to login"/>
-				      	<br>
-				      	<input type="Last Name" class="form-control" name="last name" placeholder="Last Name" required=""  data-toggle="tooltip" title="use this username to login"/>
-				      	<br>
-				      	<input type="radio" name="New Subscriber" value="subscriber">click here if you're a new subscriber
-				      	<br>
-				      	<br>
-				      	<div class="botcheck">
-          					<label class="label">You must answer <u>YES</u> to the question below to<br /> approve sending this email.  <span class="required">*</span></label>
-              				Do you want to send me an email? <input name="botcheck" class="inputtext" type="text" maxlength="5" size="5" />
-              			</div> -->
+           			 <script src='https://www.google.com/recaptcha/api.js'></script>
+              			 <div class="g-recaptcha" data-sitekey="6Ld4YT8UAAAAAArKFbxAZ2lF8HqJWvR-Mo68EM_X"></div>
+    
+
+
 				      	<div class="row">
 					      	<div class="col-sm push">     
 							   <button class="btn btn-lg btn-block register_button signin align-center" type="submit">Subcribe</button>   

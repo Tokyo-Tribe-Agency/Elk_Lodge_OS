@@ -43,13 +43,15 @@
 			</div>
 			    <form class="form-signin">       
 			    	<h2 class="form-signin-heading">Please Wedding</h2>
-			      	<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+			    	{{inquiry_form.as_p}}
+				    	{% csrf_token %}
+			      	<!-- <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
 			      	<br>
 			      	<input type="Password" class="form-control" name="password" placeholder="Password" required=""/> 
 			      	<br>     
 	    			<h5>
 	    				<a>Forgot your Wedding?</br>Click here</a>
-	    			</h5>
+	    			</h5> -->
 	    			<div class="row">
 			      		<div class="col-sm push">     
 					   		<button class="btn btn-lg btn-block register_button signin" type="submit"> wed </button>   

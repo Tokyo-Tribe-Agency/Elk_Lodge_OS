@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from lodge.views.views import *
-
+from lodge.views.user_views import *
+from lodge.views.event_views import *
+from lodge.views.paypal_views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,7 +26,7 @@ urlpatterns = [
     # url(r'^login$', login, name='login'),
     # url(r'^register$', register, name='register'),
     url(r'^wedding$', wedding, name='wedding'),
-    url(r'^newsletter$', newsletter, name='newsletter'),
+    # url(r'^newsletter$', newsletter, name='newsletter'),
     url(r'^new_checkout$', new_checkout, name='new_checkout'),
     url(r'^show_checkout/(?P<transaction_id>.+?)$', show_checkout, name='show_checkout'),
     url(r'^create_checkout$', create_checkout, name='create_checkout'),
@@ -34,6 +36,7 @@ urlpatterns = [
     url(r'^recent_events$', recent_events, name='recent_events'),
     url(r'^event/(?P<event_id>.+?)$', get_this_event, name='get_this_event'),
     url(r'^add_inquiry$', add_inquiry, name='add_inquiry'),
+    url(r'^add_subscriber_to_newsletter_list$', add_subscriber_to_newsletter_list, name='add_subscriber_to_newsletter_list'),
     url(r'^success$', success, name='success'),
     url(r'^error$', error, name='error'),
     url(r'^application$', application, name='application')
