@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "scripts/styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	<div class="padding"></div>
+	<h3 class="text-center">Subscribe to the Elk Lodge Newsletter</h3>
+  	<div class="container">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm">
+					<form class="form-signin" method="post" action="{% url 'add_subscriber_to_newsletter_list' %}">
+				    	{{newsletter_form.as_p}}
+				    	{% csrf_token %}
+				    	<script src='https://www.google.com/recaptcha/api.js'></script>
+              			 <div class="g-recaptcha" data-sitekey="6Ld4YT8UAAAAAArKFbxAZ2lF8HqJWvR-Mo68EM_X"></div>
+    
+				      	<input type="radio" name="New Subscriber" value="subscriber">click here if you're a new subscriber
+				      	<br>
+				      	<br>
+				      	<div class="row">
+					      	<div class="col-sm push">     
+							   <button class="btn btn-lg btn-block register_button signin align-center" type="submit">Subcribe</button>   
+							</div>
+						</div>
+				    </form>
+				</div>
+				<div class="col-sm"></div>
+			</div>
+  		</div>
+	</div>
+	{% include "footer.html"%}
+	{% include "scripts/js.html"%}
+</body>
+</html> 
+
+

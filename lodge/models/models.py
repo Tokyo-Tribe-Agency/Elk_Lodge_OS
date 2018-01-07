@@ -164,7 +164,7 @@ class Inquiry(models.Model):
 	inquiry_title = models.CharField(max_length=250, null=True, blank=True)
 	inquiry_content = models.CharField(max_length=500, null=True, blank=True)
 	inquiry_email_address = models.CharField(max_length=100, null=True, blank=True)
-
+	botcheck = models.CharField(max_length=4, null=True, blank=True)
 	# def __str__(self):
 	# 	return self.inquirer_first_name
 

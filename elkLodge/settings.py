@@ -25,8 +25,24 @@ SECRET_KEY = 'l8)k4h=nk5uvkq2n%m9u=#&r@a+p((d^^tsz%5jw0xa-nh&68t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Ld4YT8UAAAAAJ9Hfcx5ereBln99FtMs1LH9fkS9'
+
 ALLOWED_HOSTS = []
 
+BRAINTREE_MERCHANT_ID = '<dwnqbjvjdjc8ysjp>'
+BRAINTREE_PUBLIC_KEY = '<kgzvv6qhfzq6dq5y>'
+BRAINTREE_PRIVATE_KEY = '<4e0b90ddfad27f835c658a2f76850504>'
+
+# Admins 
+# ADMINS = [('Angela', 'leead4@gmail.com')]
+# EMAIL_SUBJECT_PREFIX =  '[Django] '
+# SERVER_EMAIL = 'root@localhost'
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'tmp/email_messages/'
 
 # Application definition
 
@@ -99,6 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
 
 
 # Internationalization

@@ -7,6 +7,9 @@
 // }
 
 
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
@@ -30,10 +33,10 @@
     } // End if
   });
   
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
-
       var winTop = $(window).scrollTop();
         if (pos < winTop + 600) {
           $(this).addClass("slide");

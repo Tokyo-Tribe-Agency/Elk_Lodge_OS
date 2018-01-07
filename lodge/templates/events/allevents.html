@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ElkLodge</title>
+	{%include "scripts/styles.html"%}
+</head>
+<body>
+ 	{%include "navbar.html"%}
+		<div class="container-fluid main">
+		{% for event in events%}
+			<div class="row">
+				<div class="col-sm-12 panel-sizing">
+      				<div class="panel panel-default text-center">
+        				<div class="panel-heading">
+        					<h1><a href="{% url 'get_this_event' event.id %}">{{event.event_name}}</a></h1>
+        				</div>
+        				<div class="panel-body">
+				          <p>{{event.event_description}}</p>
+				          <p>{{event.event_date}}</p>
+				          <p>{{event.event_location}}</p>
+				          <p>{{event.event_description}}</p>
+				          <p>{{event.event_time}}</p>
+				          <p>{{event.event_amount}}</p>
+        				</div>
+				        <div class="panel-footer">
+        				</div>
+      				</div>      
+    			</div>     
+			</div>
+			{% endfor %}
+		</div>
+
+	{%include "footer.html"%}
+	{%include "scripts/js.html"%}
+
+	
+</body>
+</html> 

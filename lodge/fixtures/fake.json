@@ -172,10 +172,11 @@
     "fields": {
       "event_name": "Golf'N for Gandolf", 
       "event_type": "Annual Golf",
-      "event_description": "Golf Charity Event",
+      "event_description": "Gandolf Charity Event",
       "event_date":"2016-04-25",
       "event_location": "Nashville",
-      "event_time": "3:30 PM"
+      "event_time": "3:30 PM",
+      "event_amount": "200"
     }
   },
   {
@@ -184,10 +185,11 @@
     "fields": {
       "event_name": "Golf'N for Gumbo", 
       "event_type": "Annual Golf",
-      "event_description": "Golf Charity Event",
+      "event_description": "Gumbo Charity Event",
       "event_date":"2016-04-25",
       "event_location": "Nashville",
-      "event_time": "3:30 PM"
+      "event_time": "3:40 PM",
+      "event_amount": "100"
     }
   },
   {
@@ -196,10 +198,11 @@
     "fields": {
       "event_name": "Golf'N for Gravy", 
       "event_type": "Annual Golf",
-      "event_description": "Golf Charity Event",
+      "event_description": "Gravy Charity Event",
       "event_date":"2017-04-25",
       "event_location": "Nashville",
-      "event_time": "3:30 PM"
+      "event_time": "3:50 PM",
+      "event_amount": "300"
     }
   },
   {
