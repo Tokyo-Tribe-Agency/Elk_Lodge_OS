@@ -52,6 +52,46 @@ def add_inquiry(request):
             return HttpResponse('Make sure all fields are entered and valid.')
             return HttpResponseRedirect('/error')
 
+@check_recaptcha
+def wedding(request):
+
+    if request.method == 'GET':
+        template_name = 'wedding/weddings.html'
+        inquiry_form = InquiryForm()
+        return render(request, template_name, {'inquiry_form': inquiry_form})
+
+    elif request.method == 'POST':
+        form_data = request.POST
+        inquiry_form = InquiryForm(form_data)
+
+        
+        if inquiry_form.is_valid() and request.recaptcha_is_valid:
+            i = Inquiry(
+                inquirer_first_name = inquiry_form.cleaned_data['inquirer_first_name'],
+                inquirer_last_name = inquiry_form.cleaned_data['inquirer_last_name'],
+                inquiry_title  = inquiry_form.cleaned_data['inquiry_title'],
+                inquiry_content = inquiry_form.cleaned_data['inquiry_content'],
+                inquiry_email_address = inquiry_form.cleaned_data['inquiry_email_address'],
+            ) 
+
+            i.save()
+            
+            subject = "Elk Lodge Inquiry"
+            message = "This is a confirmation of your recent inquiry to the Elk Lodge"
+            from_email = "imfakeinquiry@email.com"
+            recipient = inquiry_form.cleaned_data['inquiry_email_address']
+            recipient_list = [recipient]
+
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                mail_admins(subject, message, fail_silently=False, connection=None, html_message=None)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect('/success')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
+            return HttpResponseRedirect('/error')
+
 
 @check_recaptcha
 def add_subscriber_to_newsletter_list(request):

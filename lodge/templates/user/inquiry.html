@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-sm"></div>
 				<div class="col-sm">
-				    <form class="form-signin" method="post" action="{% url 'add_inquiry' %}">
+				    <form class="form-signin" method="post" action="{% url 'submit_inquiry' %}">
 				    	{{inquiry_form.as_p}}
 				    	{% csrf_token %}
            			 <script src='https://www.google.com/recaptcha/api.js'></script>
