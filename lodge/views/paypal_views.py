@@ -5,7 +5,9 @@ from lodge.forms.forms import *
 from django.db.models import Q
 from lodge.models.models import *
 from django.conf import settings
+from django.http import HttpResponse
 import braintree
+
 
 
 braintree.Configuration.configure(
@@ -26,8 +28,6 @@ TRANSACTION_SUCCESS_STATUSES = [
 ]
 
 
-
-
 def new_checkout(request):
     client_token = braintree.ClientToken.generate()
     template_name = 'paypal/new.html'
@@ -43,13 +43,23 @@ def show_checkout(request, transaction_id):
             'icon': 'success',
             'message': 'Your test transaction has been successfully processed. See the Braintree API response and try again.'
         }
+        print(transaction)
+        d = Donations(
+            donation_id = transaction.id,
+            donation_type = transaction.type,
+            donation_amount = transaction.amount,
+            donation_date = transaction.created_at,
+            donation_cardholder_name = str(transaction.credit_card_details.cardholder_name)
+            )
+        
+        d.save()
     else:
         result = {
             'header': 'Transaction Failed',
             'icon': 'fail',
             'message': 'Your test transaction has a status of ' + transaction.status + '. See the Braintree API response and try again.'
         }
-
+    
     return render(request, template_name, {'transaction': transaction, 'result': result})
 
 def create_checkout(request):

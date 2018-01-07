@@ -137,21 +137,11 @@
     "model": "lodge.Donations",
     "pk": 1,
     "fields": {
+      "donation_id": "awe543tt5",
       "donation_type": "cash",
       "donation_amount":"500",
-      "donation_date": "2017-04-25"
-    }
-  },
-  {
-    "model": "lodge.Payments",
-    "pk": 2,
-    "fields": {
-      "payment_name": "Kevin Bacon",
-      "payment_method": "Credit Card",
-      "payment_total_amount": "500",
-      "payment_date": "2016-04-25",
-      "payment_time": "7:00 PM"
-
+      "donation_date": "2017-04-25",
+      "donation_cardholder_name": "kevin"
     }
   },
   {

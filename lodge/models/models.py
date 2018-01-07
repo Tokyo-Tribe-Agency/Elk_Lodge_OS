@@ -61,12 +61,22 @@ class Elks(models.Model):
 
 
 class Donations(models.Model):
+	donation_id = models.CharField(max_length=100, null=True, blank=True)
 	donation_type = models.CharField(max_length=100, null=True, blank=True)
 	donation_amount = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
 	donation_date = models.DateField(null=True, blank=True)
+	donation_cardholder_name = models.CharField(max_length=100, null=True, blank=True)  
+    
+	# def __str__(self):
+	# 	return self.donation_id
+
+
+	# def __str__(self):
+	# 	return self.donation_type
 
 	def __str__(self):
-		return self.donation_type
+		return self.donation_cardholder_name
+
 
 	# def __str__(self):
 	# 	return self.donation_amount
@@ -75,27 +85,7 @@ class Donations(models.Model):
 	# 	return self.donation_date
 
 
-class Payments(models.Model):
-	payment_name = models.CharField(max_length=50, null=True, blank=True)
-	payment_method = models.CharField(max_length=150, null=True, blank=True)
-	payment_total_amount = models.CharField(max_length=10, null=True, blank=True)
-	payment_date = models.DateField(null=True, blank=True)
-	payment_time = models.CharField(max_length=20, null=True, blank=True)
 
-	def __str__(self):
-		return self.payment_name
-
-	# def __str__(self):
-	# 	return self.payment_method
-
-	# def __str__(self):
-	# 	return self.payment_total_amount
-
-	# def __str__(self):
-	# 	return self.payment_date
-
-	# def __str__(self):
-	# 	return self.payment_time
 
 class Events(models.Model):
 	event_name = models.CharField(max_length=50, null=True, blank=True)
@@ -179,52 +169,6 @@ class Inquiry(models.Model):
 
 	# def __str__(self):
 	# 	return self.inquiry_content
-
-
-class Membership_Application(models.Model):
-	prospective_member_first_name = models.CharField(max_length=20, null=True, blank=True)
-	prospective_member_last_name = models.CharField(max_length=50, null=True, blank=True)
-	prospective_member_email_address = models.CharField(max_length=100, null=True, blank=True)
-	prospective_member_address = models.CharField(max_length=300, null=True, blank=True)
-	prospective_membership_type = models.CharField(max_length=100, null=True, blank=True)
-
-	# def __str__(self):
-	# 	return self.prospective_member_first_name
-
-	# def __str__(self):
-	# 	return self.prospective_member_last_name
-
-	def __str__(self):
-		return self.prospective_member_email_address
-
-	# def __str__(self):
-	# 	return self.prospective_member_address
-
-	# def __str__(self):
-	# 	return self.prospective_membership_type
-
-class PayPal_Transaction(models.Model):
-    trans_id = models.CharField(max_length=20, null=True, blank=True)
-    trans_type = models.CharField(max_length=20, null=True, blank=True)
-    amount = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
-    status = models.CharField(max_length=20, null=True, blank=True)
-    created_at = models.DateTimeField('Transaction Created', null=True, blank=True)
-    updated_at = models.DateTimeField('Transaction Last Updated', null=True, blank=True)
-
-    def __str__(self):
-        return str(self.trans_id)
-
-class PayPal_Payment(models.Model):
-    token = models.CharField(max_length=20, null=True, blank=True)
-    bin = models.CharField(max_length=20, null=True, blank=True)
-    last_4 = models.IntegerField(default=0, null=True, blank=True)
-    card_type = models.CharField(max_length=20, null=True, blank=True)
-    expiration_date = models.IntegerField(default=0, null=True, blank=True)
-    cardholder_name = models.CharField(max_length=50, null=True, blank=True)
-    customer_location = models.CharField(max_length=50, null=True, blank=True)
-
-    def __str__(self):
-        return str(self.token)
 
 
 
