@@ -5,9 +5,9 @@
   <div class="checkout container">
 
     <header>
-      <h1>Hi, <br>Let's test a transaction</h1>
+      <h1>Choose A Way To Pay</h1>
       <p>
-        Make a test payment with Braintree using PayPal or a card
+        Make a payment using PayPal or a credit or debit card
       </p>
     </header>
     <form id="payment-form" method="post" action="/create_checkout">{% csrf_token %}
@@ -25,9 +25,10 @@
       </section>
 
       <input type="hidden" id="nonce" name="payment_method_nonce" />
-      <button class="button" type="submit" id="submit-button"><span>Test Transaction</span></button>
-    </form>
-
+      <button class="button" type="submit" id="submit-button"><span>Sumbit Payment</span></button>
+    </form><br>
+<p>Return/Refund Policy: </p>
+<p>Privacy Policy: </p>
   </div>
 </div>
 

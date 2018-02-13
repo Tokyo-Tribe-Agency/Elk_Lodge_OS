@@ -7,6 +7,7 @@ from decimal import Decimal
 
 # Create your models here.
 class Photos(models.Model):
+	# photo_id = models.ForeignKey(to='elk_photo', on_delete='elk_photo',)
 	photo_name = models.CharField(max_length=50, null=True, blank=True)
 	photo_url = models.CharField(max_length=100, null=True, blank=True)
 	photo_type = models.CharField(max_length=150, null=True, blank=True)
@@ -15,6 +16,9 @@ class Photos(models.Model):
 
 	def __str__(self):
 		return self.photo_name
+
+	class Meta:
+		verbose_name_plural = "Photo's"
 
 	# def __str__(self):
 	# 	return self.photo_url
@@ -33,10 +37,13 @@ class Elks(models.Model):
 	email_address = models.CharField(max_length=100, null=True, blank=True)
 	linked_in_url = models.CharField(max_length=100, null=True, blank=True)
 	date_joined = models.DateField('date joined', null=True, blank=True)
-	elk_photo = models.ForeignKey(Photos, on_delete=models.CASCADE)
+	elk_photo = models.ManyToManyField(Photos)
 
 	def __str__(self):
 		return self.first_name
+
+	class Meta:
+		verbose_name_plural = "Elk Member's"
 
 	# def __str__(self):
 	# 	return self.last_name
@@ -61,12 +68,12 @@ class Elks(models.Model):
 
 
 class Donations(models.Model):
-	donation_id = models.CharField(max_length=100, null=True, blank=True)
+	donation_id = models.IntegerField(max_length=100, null=True, blank=True)
 	donation_type = models.CharField(max_length=100, null=True, blank=True)
 	donation_amount = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
 	donation_date = models.DateField(null=True, blank=True)
-	donation_cardholder_name = models.CharField(max_length=100, null=True, blank=True)  
-    
+	donation_cardholder_name = models.CharField(max_length=100, null=True, blank=True)
+
 	# def __str__(self):
 	# 	return self.donation_id
 
@@ -76,6 +83,9 @@ class Donations(models.Model):
 
 	def __str__(self):
 		return self.donation_cardholder_name
+
+	class Meta:
+		verbose_name_plural = "Donations"
 
 
 	# def __str__(self):
@@ -88,17 +98,39 @@ class Donations(models.Model):
 
 
 class Events(models.Model):
+
 	event_name = models.CharField(max_length=50, null=True, blank=True)
-	event_type = models.CharField(max_length=100, null=True, blank=True)
+	WEDDING = 'WD'
+	LODGE_MEETING = 'LM'
+	CHARITABLE_EVENT = 'CE'
+	AUCTION = 'AU'
+	CONCERT = 'CO'
+	GALA = 'GA'
+	SPORTING_EVENT = 'SE'
+	event_type_choices = (
+	(WEDDING, 'Wedding'),
+	(LODGE_MEETING, 'Lodge Meeting'),
+	(CHARITABLE_EVENT, 'Charitable Event'),
+	(AUCTION, 'Auction'),
+	(CONCERT, 'Concert'),
+	(GALA, 'Gala'),
+	(SPORTING_EVENT, 'Sporting Event'),
+	)
+	event_type = models.CharField(max_length=100, null=True, blank=True, choices=event_type_choices, default=LODGE_MEETING,)
 	event_description = models.TextField(null=True, blank=True)
 	event_date = models.DateTimeField('date of event')
 	event_location = models.CharField(max_length=100, null=True, blank=True)
-	event_time = models.CharField(max_length=20, null=True, blank=True)
-	event_amount = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
+	# event_time = models.IntegerField(max_length=20, null=True, blank=True)
+	event_amount = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True, help_text="Please provide a numeric US dollar amount")
 
 	def __str__(self):
 		return self.event_name
 
+	def is_upperclass(self):
+		return self.event_date in (self.LODGE_MEETING, self.CHARITABLE_EVENT)
+
+	class Meta:
+		verbose_name_plural = "Event's"
 	# def __str__(self):
 	# 	return self.event_type
 
@@ -136,6 +168,8 @@ class Newsletter(models.Model):
 	def __str__(self):
 		return self.subscriber_email_address
 
+	class Meta:
+		verbose_name_plural = "Newsletter's"
 	# def __str__(self):
 	# 	return self.new_subscriber
 
@@ -164,11 +198,10 @@ class Inquiry(models.Model):
 	def __str__(self):
 		return self.inquiry_email_address
 
+	class Meta:
+		verbose_name_plural = "Inquiries"
 	# def __str__(self):
 	# 	return self.inquiry_title
 
 	# def __str__(self):
 	# 	return self.inquiry_content
-
-
-

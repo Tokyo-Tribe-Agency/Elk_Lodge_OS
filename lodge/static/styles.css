@@ -28,7 +28,7 @@
   }
 
   .handscript button:hover {
-    background-color: #334738; 
+    background-color: #334738;
     color: #FFF;
   }
 
@@ -79,18 +79,18 @@
     letter-spacing: 3px;
     border: solid 2px #09260c;
     float: right;
-    color: #334738 !important;   
+    color: #334738 !important;
 }
 
 .navbar button:hover {
-    border-color:  #56765e; 
+    border-color:  #56765e;
     box-shadow: 1px 1px;
 }
 
 
 .navbar button a {
   text-decoration: none;
-  color: #334738 !important;   
+  color: #334738 !important;
 }
 
 /*jumbotron elk svg styling --jumbotron.html*/
@@ -120,7 +120,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #334738; 
+    background-color: #334738;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -182,7 +182,7 @@ button.handscript.text-center:hover {
 
   .jumbotron1 {
     background-color: #EDF0F2;
-    background: url(assets/ElkBanner_Index.jpg) no-repeat center center; 
+    background: url(assets/ElkBanner_Index.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -195,7 +195,7 @@ button.handscript.text-center:hover {
   .container-fluid {
       padding: 60px 50px;
   }
-  
+
 
 .band {
   display: flex;
@@ -204,7 +204,7 @@ button.handscript.text-center:hover {
   text-transform: capitalize;
   padding-top: 0%;
   color: #303030;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   background-color: #09260c;
 }
 
@@ -213,7 +213,7 @@ button.handscript.text-center:hover {
 }
 
 /*slideshow styling - cards --about.html, events.html*/
-  
+
   .slideBox {
     height: 500px;
     width: auto;
@@ -226,14 +226,14 @@ button.handscript.text-center:hover {
   #events > #carousel > .carousel-inner > .item >.card > .card-block > h4 {
     color: #303030;
     padding-top: 5%;
-  } 
+  }
 
   .card-style {
     z-index: 100;
     margin: auto;
     width: 100%;
     background-color: #37474f;
-    font-family: Montserrat, sans-serif; 
+    font-family: Montserrat, sans-serif;
     letter-spacing: 1px;
     color: white !important;
     width: 263px;
@@ -282,7 +282,7 @@ button.handscript.text-center:hover {
   background-image: none !important;
 }
 
-.carousel-indicators 
+.carousel-indicators
 .active {
   background-color: transparent !important;
   color: transparent !important;
@@ -301,7 +301,7 @@ button.handscript.text-center:hover {
   color: #383838 !important;
 }
 
-.wrapper {  
+.wrapper {
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -341,9 +341,9 @@ button.handscript.text-center:hover {
       border-top: transparent;
   }
   .panel-body {
-    border-bottom: 1px solid #ddd;  
+    border-bottom: 1px solid #ddd;
   }
-  
+
   .panel-footer .btn {
       background-color: #303030;
       color: #fff;
@@ -364,7 +364,7 @@ button.handscript.text-center:hover {
     0% {
       /*opacity: 0;*/
       transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -373,7 +373,7 @@ button.handscript.text-center:hover {
   @-webkit-keyframes slide {
     0% {
       -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       -webkit-transform: translateY(0%);
@@ -385,7 +385,7 @@ button.handscript.text-center:hover {
       margin: 25px 0;
     }
   }
-  
+
 
   /*login register wedding.html*/
 
@@ -399,7 +399,7 @@ form {
   padding: 3%;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
+  border: 1px solid rgba(0,0,0,0.1);
 
   .form-signin-heading,
   .checkbox {
@@ -448,10 +448,10 @@ form {
    display: block;
   margin-left: auto;
     margin-right: auto;
-  -webkit-transition-duration: 0.4s; 
+  -webkit-transition-duration: 0.4s;
     /*transition-duration: 0.4s;*/
     text-transform: lowercase;
-    background-color: #fff; 
+    background-color: #fff;
     border: solid 2px #2b3b2f;
     color: #2b3b2f;
 }
@@ -461,7 +461,7 @@ form {
 }
 
 .form-signin {
-  background-color: #405946; 
+  background-color: #405946;
   border: solid 2px #334738;
   text-align: center;
   text-transform: lowercase;
@@ -481,7 +481,7 @@ form a {
 
 form a:hover {
   color: #fff;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 
@@ -493,7 +493,7 @@ form a:hover {
 .parallax_0, .parallax_1, .parallax_2 {
     text-align: center;
     opacity: .5;
-    height: 50%; 
+    height: 50%;
     min-height: 300px;
     border: double 6px #5F8569;
     /* Create the parallax scrolling effect */
@@ -519,7 +519,7 @@ form a:hover {
 .parallax {
   padding-top: 10%;
   text-align: center;
-  text-transform: lowercase; 
+  text-transform: lowercase;
   font-size: 1em !important;
   overflow: hidden;
   height: 200px;
@@ -542,7 +542,7 @@ form a:hover {
   border: solid 3px #5F8569;
   z-index: 500;
   top: 50%;
-  min-width: 30%; 
+  min-width: 30%;
   margin: 0 auto;
   padding: 2.5%;
 }
@@ -593,3 +593,6 @@ footer {
     background-color:#334738;
   }
 
+.input-label {
+  color: black;
+}
